@@ -28,7 +28,7 @@
       {% if  post.type == 'link' %}
       <a class="post-title-link uk-link-reset" href="{{ post.link  }}"  target="_blank" itemprop="url">{{ post.title }}</a>
       {% else %}
-      <a class="post-title-link uk-link-reset" href="{{ post.url |  prepend: site.baseurl }}" itemprop="url">{{ post.title }}</a>
+      <a class="post-title-link uk-link-reset" href="{{ site.url }}{{ post.url }}" itemprop="url">{{ post.title }}</a>
       {% endif %}
     </h2>
     <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">{{ post.excerpt | strip_html | truncate: 500 }}</p>
@@ -48,7 +48,7 @@
         <a class="post-title-link uk-button uk-button-text" href="{{ post.link }}" itemprop="url">Read more</a>
 
         {% else %}
-        <a class="post-title-link uk-button uk-button-text" href="{{ post.url |  prepend: site.baseurl }}" itemprop="url">Read more</a>
+        <a class="post-title-link uk-button uk-button-text" href="{{ site.url }}{{ post.url }}" itemprop="url">Read more</a>
 
         {% endif %}
       </div>
