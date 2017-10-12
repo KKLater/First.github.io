@@ -5,6 +5,7 @@
   <script>AV.initialize("{{site.leancloud_visitors.app_id}}", "{{site.leancloud_visitors.app_key}}");</script>
   <script>
     function showTime(Counter) {
+
       var query = new AV.Query(Counter);
       var entries = [];
       var $visitors = $(".leancloud_visitors");
@@ -29,6 +30,7 @@
             var time = item.get('time');
             var element = document.getElementById(url);
 
+alert(time);
             $(element).find(COUNT_CONTAINER_REF).text(time);
           }
           for(var i = 0; i < entries.length; i++) {
