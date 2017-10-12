@@ -99,11 +99,19 @@ leancloud_visitors:
 
 
 # wordcount
-post_wordcount:
-  item_text: true
-  wordcount: true
-  min2read: true
-  separated_meta: true
+  # item_text: true
+
+# post_wordcount:
+# a_wordcount: true
+
+# item_text: true
+
+# separated_meta: true
+
+# a_min2read: true
+
+  # wordcount: true
+  # separated_meta: true
 
 
 

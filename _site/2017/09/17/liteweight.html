@@ -7,12 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>首页</title>
 
+  <link rel="stylesheet" type="text/css" href="/assets/uikit/css/uikit.css">
 
+  <link rel="stylesheet" type="text/css" href="/assets/css/theme.css">
 
-  <!-- UIkit CSS -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
 
-  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/navigation.css">
 
+  <link rel="stylesheet" type="text/css" href="/assets/css/paginator.css">
 
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -28,10 +33,13 @@
 
 
   <script src=" /assets/highlight/highlight.pack.js "></script>
+
   <script>
      hljs.initHighlightingOnLoad();
   </script>
-  <script type="text/javascript" src="/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2144594"></script>
+
   <script type="text/javascript">
 
    window.onload = function()
@@ -45,36 +53,31 @@
     }
 
   } 
- window.onscroll =  function()
- {
+  window.onscroll =  function()
+  {
     var winHeight = 0;
     if (window.innerHeight) {
       winHeight = window.innerHeight;
     } else if ((document.body) && (document.body.clientHeight)) {
       winHeight = document.body.clientHeight;
     }
-var height = $(document).scrollTop(); 
+    var height = $(document).scrollTop(); 
 
 
-if (height > 10) {
+    if (height > 10) {
      $('.scroll-top-button').removeClass('uk-hidden');
 
-    $('.scroll-top-button').addClass('uk-visible');
-} else {
+     $('.scroll-top-button').addClass('uk-visible');
+   } else {
     $('.scroll-top-button').removeClass('uk-visible');
 
     $('.scroll-top-button').addClass('uk-hidden');
-}   
- }
-
+  }   
+}
 </script>
-
 </head>
-
 <body>
-
-    <div>
-      <!-- <div id="wrapper"> -->
+  <div>
       
 <div uk-sticky class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed uk-active uk-sticky-below">
 	<div class=" uk-container uk-container-expand  ls-container" >
@@ -91,7 +94,7 @@ if (height > 10) {
 
 					
 					
-					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/">POST</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/">POST</a></li>
 					
 
 
@@ -101,7 +104,7 @@ if (height > 10) {
 
 					
 					
-					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/archive">ARCHIVE</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/archive">ARCHIVE</a></li>
 					
 
 
@@ -111,7 +114,7 @@ if (height > 10) {
 
 					
 					
-					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/tags">TAGS</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/tags">TAGS</a></li>
 					
 
 
@@ -121,7 +124,7 @@ if (height > 10) {
 
 					
 					
-					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/links">LINKS</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/links">LINKS</a></li>
 					
 
 
@@ -131,7 +134,7 @@ if (height > 10) {
 
 					
 					
-					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/about">ABOUT</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/about">ABOUT</a></li>
 					
 
 
@@ -150,9 +153,8 @@ if (height > 10) {
 
 							
 					
-						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/">POST</a></li>
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/">POST</a></li>
 					
-						<!-- <li><a href="/">POST</a></li> -->
 
 						
 						
@@ -160,9 +162,8 @@ if (height > 10) {
 
 							
 					
-						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/archive">ARCHIVE</a></li>
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/archive">ARCHIVE</a></li>
 					
-						<!-- <li><a href="/archive">ARCHIVE</a></li> -->
 
 						
 						
@@ -170,9 +171,8 @@ if (height > 10) {
 
 							
 					
-						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/tags">TAGS</a></li>
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/tags">TAGS</a></li>
 					
-						<!-- <li><a href="/tags">TAGS</a></li> -->
 
 						
 						
@@ -180,9 +180,8 @@ if (height > 10) {
 
 							
 					
-						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/links">LINKS</a></li>
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/links">LINKS</a></li>
 					
-						<!-- <li><a href="/links">LINKS</a></li> -->
 
 						
 						
@@ -190,9 +189,8 @@ if (height > 10) {
 
 							
 					
-						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/about">ABOUT</a></li>
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/about">ABOUT</a></li>
 					
-						<!-- <li><a href="/about">ABOUT</a></li> -->
 
 						
 						
@@ -204,25 +202,12 @@ if (height > 10) {
 	</div>
 </div>
 
-        <div class="uk-offcanvas-content">
+      <div class="uk-offcanvas-content">
 
 
-      <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
-        <div class="uk-margin-small-left uk-margin-small-right">
-
-        
-          
-
-
-  
-    
-
-    <!--  -->
-  
-
-
-
-
+        <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
+          <div class="uk-margin-small-left uk-margin-small-right">            
+            
 <link rel="stylesheet" type="text/css" href="/assets/css/post.css">
 <div  class="uk-width-1 uk-child-width-1 uk-margin-auto uk-grid-medium" style="max-width: 640px" uk-grid>
 
@@ -239,6 +224,17 @@ if (height > 10) {
 				2017-09-17
 				
 				
+				<div>
+					
+					<span id="/2017/09/17/liteweight.html" class="leancloud_visitors uk-margin-left uk-margin-top-remove" data-flag-title="集合与泛型">
+						<span class="post-meta-item-icon uk-margin-small-right">
+							<i class="fa fa-eye"></i>
+						</span>
+
+						<span class="leancloud-visitors-count">0</span>
+					</span>
+					
+				</div>
 			</div>
 		</div>
 	</div>
@@ -517,25 +513,12 @@ public void takeThing(ArrayList&lt;? extends Animal&gt; one, ArrayList&lt;? exte
   </div>
 
 
-     
-             <span id="" class="leancloud_visitors" data-flag-title="">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                                  <span class="post-meta-item-text">0 </span>
-
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
 
 
 
 
-      </div>
-                 <div class="uk-width-1 uk-text-center uk-padding-small uk-text-small uk-text-left">
+          </div>
+          <div class="uk-width-1 uk-text-center uk-padding-small uk-text-small uk-text-left">
 	
 	
 	 &copy; 1970 Later
@@ -543,24 +526,22 @@ public void takeThing(ArrayList&lt;? extends Animal&gt; one, ArrayList&lt;? exte
 	 	>Later</a></p>
 </div>
 
-
-      
-     </div>
-       <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
-        <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
-            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
-
         </div>
-</div>
-     </div>
+        <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
+          <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
+            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
+          </div>
+        </div>
+      </div>
     </div>
-      
+    
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
   <script>AV.initialize("TEv9SLGVuokoA9S9hEJ4YdW3-gzGzoHsz", "FB770fG9JNXEB42O9KEOeFCT");</script>
   <script>
     function showTime(Counter) {
+
       var query = new AV.Query(Counter);
       var entries = [];
       var $visitors = $(".leancloud_visitors");
@@ -663,7 +644,6 @@ public void takeThing(ArrayList&lt;? extends Animal&gt; one, ArrayList&lt;? exte
 
 
 
+  </body>
+  </html>
 
-
- </body>
- </html>

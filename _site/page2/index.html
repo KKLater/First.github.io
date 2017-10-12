@@ -7,12 +7,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>首页</title>
 
+  <link rel="stylesheet" type="text/css" href="/assets/uikit/css/uikit.css">
 
+  <link rel="stylesheet" type="text/css" href="/assets/css/theme.css">
 
-  <!-- UIkit CSS -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
 
-  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/navigation.css">
 
+  <link rel="stylesheet" type="text/css" href="/assets/css/paginator.css">
 
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
@@ -28,10 +33,13 @@
 
 
   <script src=" /assets/highlight/highlight.pack.js "></script>
+
   <script>
      hljs.initHighlightingOnLoad();
   </script>
-  <script type="text/javascript" src="/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2144594"></script>
+
   <script type="text/javascript">
 
    window.onload = function()
@@ -45,36 +53,31 @@
     }
 
   } 
- window.onscroll =  function()
- {
+  window.onscroll =  function()
+  {
     var winHeight = 0;
     if (window.innerHeight) {
       winHeight = window.innerHeight;
     } else if ((document.body) && (document.body.clientHeight)) {
       winHeight = document.body.clientHeight;
     }
-var height = $(document).scrollTop(); 
+    var height = $(document).scrollTop(); 
 
 
-if (height > 10) {
+    if (height > 10) {
      $('.scroll-top-button').removeClass('uk-hidden');
 
-    $('.scroll-top-button').addClass('uk-visible');
-} else {
+     $('.scroll-top-button').addClass('uk-visible');
+   } else {
     $('.scroll-top-button').removeClass('uk-visible');
 
     $('.scroll-top-button').addClass('uk-hidden');
-}   
- }
-
+  }   
+}
 </script>
-
 </head>
-
 <body>
-
-    <div>
-      <!-- <div id="wrapper"> -->
+  <div>
       
 <div uk-sticky class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed uk-active uk-sticky-below">
 	<div class=" uk-container uk-container-expand  ls-container" >
@@ -91,7 +94,7 @@ if (height > 10) {
 
 					
 					
-					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/">POST</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/">POST</a></li>
 					
 
 
@@ -101,7 +104,7 @@ if (height > 10) {
 
 					
 					
-					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/archive">ARCHIVE</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/archive">ARCHIVE</a></li>
 					
 
 
@@ -111,7 +114,7 @@ if (height > 10) {
 
 					
 					
-					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/tags">TAGS</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/tags">TAGS</a></li>
 					
 
 
@@ -121,7 +124,7 @@ if (height > 10) {
 
 					
 					
-					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/links">LINKS</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/links">LINKS</a></li>
 					
 
 
@@ -131,7 +134,7 @@ if (height > 10) {
 
 					
 					
-					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/about">ABOUT</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/about">ABOUT</a></li>
 					
 
 
@@ -150,9 +153,8 @@ if (height > 10) {
 
 							
 					
-						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/">POST</a></li>
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/">POST</a></li>
 					
-						<!-- <li><a href="/">POST</a></li> -->
 
 						
 						
@@ -160,9 +162,8 @@ if (height > 10) {
 
 							
 					
-						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/archive">ARCHIVE</a></li>
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/archive">ARCHIVE</a></li>
 					
-						<!-- <li><a href="/archive">ARCHIVE</a></li> -->
 
 						
 						
@@ -170,9 +171,8 @@ if (height > 10) {
 
 							
 					
-						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/tags">TAGS</a></li>
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/tags">TAGS</a></li>
 					
-						<!-- <li><a href="/tags">TAGS</a></li> -->
 
 						
 						
@@ -180,9 +180,8 @@ if (height > 10) {
 
 							
 					
-						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/links">LINKS</a></li>
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/links">LINKS</a></li>
 					
-						<!-- <li><a href="/links">LINKS</a></li> -->
 
 						
 						
@@ -190,9 +189,8 @@ if (height > 10) {
 
 							
 					
-						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/about">ABOUT</a></li>
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/about">ABOUT</a></li>
 					
-						<!-- <li><a href="/about">ABOUT</a></li> -->
 
 						
 						
@@ -204,22 +202,22 @@ if (height > 10) {
 	</div>
 </div>
 
-        <div class="uk-offcanvas-content">
+      <div class="uk-offcanvas-content">
 
 
-      <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
-        <div class="uk-margin-small-left uk-margin-small-right">
-
-        
-          
+        <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
+          <div class="uk-margin-small-left uk-margin-small-right">            
+            
 <link rel="stylesheet" type="text/css" href="/assets/css/post_list.css">
+
+
 <div  class="uk-width-1 uk-child-width-1">
   <div  class="uk-margin-small-left uk-margin-medium-top uk-margin-auto uk-text-uppercase" style="max-width: 640px; font-size: 3em;" >POST</div>
+
+
+
   
-  
-  
-  
-  
+
 
   <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
 
@@ -231,7 +229,7 @@ if (height > 10) {
      
      <h2 class="uk-text-title uk-margin-small-bottom">
       
-      <a class="post-title-link uk-link-reset" href="/jekyll/pixyll/2016/07/29/AssetsLibrary-and-PhotosKit.html" itemprop="url">关于AssetsLibrary和PhotosKit</a>
+      <a class="post-title-link uk-link-reset" href="http://localhost:4000/jekyll/pixyll/2016/07/29/AssetsLibrary-and-PhotosKit.html" itemprop="url">关于AssetsLibrary和PhotosKit</a>
       
     </h2>
     <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">随着iOS不断的升级，苹果逐步放弃了AssetsLibrary，提供了新的框架Photos。
@@ -245,7 +243,7 @@ if (height > 10) {
     <div class="uk-margin-small">
       <div>
         
-        <a class="post-title-link uk-button uk-button-text" href="/jekyll/pixyll/2016/07/29/AssetsLibrary-and-PhotosKit.html" itemprop="url">Read more</a>
+        <a class="post-title-link uk-button uk-button-text" href="http://localhost:4000/jekyll/pixyll/2016/07/29/AssetsLibrary-and-PhotosKit.html" itemprop="url">Read more</a>
 
         
       </div>
@@ -256,19 +254,19 @@ if (height > 10) {
       2016-07-29
       
       <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
-      
+
       
       code
       
-      
+
       
       
     </div>
     
   </article>
-</div> 
+</div>
 
-  
+
 
   <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
 
@@ -278,7 +276,7 @@ if (height > 10) {
      
      <h2 class="uk-text-title uk-margin-small-bottom">
       
-      <a class="post-title-link uk-link-reset" href="/2016/07/10/codeigniter-hook.html" itemprop="url">CodeIgniter 钩子</a>
+      <a class="post-title-link uk-link-reset" href="http://localhost:4000/2016/07/10/codeigniter-hook.html" itemprop="url">CodeIgniter 钩子</a>
       
     </h2>
     <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">简介
@@ -292,7 +290,7 @@ if (height > 10) {
     <div class="uk-margin-small">
       <div>
         
-        <a class="post-title-link uk-button uk-button-text" href="/2016/07/10/codeigniter-hook.html" itemprop="url">Read more</a>
+        <a class="post-title-link uk-button uk-button-text" href="http://localhost:4000/2016/07/10/codeigniter-hook.html" itemprop="url">Read more</a>
 
         
       </div>
@@ -303,19 +301,19 @@ if (height > 10) {
       2016-07-10
       
       <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
-      
+
       
       code
       
-      
+
       
       
     </div>
     
   </article>
-</div> 
+</div>
 
-  
+
 
   <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
 
@@ -325,7 +323,7 @@ if (height > 10) {
      
      <h2 class="uk-text-title uk-margin-small-bottom">
       
-      <a class="post-title-link uk-link-reset" href="/2016/06/19/remote-host-identification-has-changed.html" itemprop="url">REMOTE HOST IDENTIFICATION HAS CHANGED</a>
+      <a class="post-title-link uk-link-reset" href="http://localhost:4000/2016/06/19/remote-host-identification-has-changed.html" itemprop="url">REMOTE HOST IDENTIFICATION HAS CHANGED</a>
       
     </h2>
     <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">$ ssh 45.127.97.64
@@ -350,7 +348,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
     <div class="uk-margin-small">
       <div>
         
-        <a class="post-title-link uk-button uk-button-text" href="/2016/06/19/remote-host-identification-has-changed.html" itemprop="url">Read more</a>
+        <a class="post-title-link uk-button uk-button-text" href="http://localhost:4000/2016/06/19/remote-host-identification-has-changed.html" itemprop="url">Read more</a>
 
         
       </div>
@@ -361,19 +359,19 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
       2016-06-19
       
       <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
-      
+
       
       code
       
-      
+
       
       
     </div>
     
   </article>
-</div> 
+</div>
 
-  
+
 
   <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
 
@@ -385,7 +383,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
      
      <h2 class="uk-text-title uk-margin-small-bottom">
       
-      <a class="post-title-link uk-link-reset" href="/2016/06/16/css3-waterfall-layout.html" itemprop="url">CSS3多列布局实现瀑布流</a>
+      <a class="post-title-link uk-link-reset" href="http://localhost:4000/2016/06/16/css3-waterfall-layout.html" itemprop="url">CSS3多列布局实现瀑布流</a>
       
     </h2>
     <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">HTML代码如下：
@@ -404,7 +402,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
     <div class="uk-margin-small">
       <div>
         
-        <a class="post-title-link uk-button uk-button-text" href="/2016/06/16/css3-waterfall-layout.html" itemprop="url">Read more</a>
+        <a class="post-title-link uk-button uk-button-text" href="http://localhost:4000/2016/06/16/css3-waterfall-layout.html" itemprop="url">Read more</a>
 
         
       </div>
@@ -415,19 +413,19 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
       2016-06-16
       
       <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
-      
+
       
       code
       
-      
+
       
       
     </div>
     
   </article>
-</div> 
+</div>
 
-  
+
 
   <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
 
@@ -439,7 +437,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
      
      <h2 class="uk-text-title uk-margin-small-bottom">
       
-      <a class="post-title-link uk-link-reset" href="/2016/05/30/ajax-cant-access-origin-resource.html" itemprop="url">Ajax 跨域访问</a>
+      <a class="post-title-link uk-link-reset" href="http://localhost:4000/2016/05/30/ajax-cant-access-origin-resource.html" itemprop="url">Ajax 跨域访问</a>
       
     </h2>
     <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">##问题现象
@@ -453,7 +451,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
     <div class="uk-margin-small">
       <div>
         
-        <a class="post-title-link uk-button uk-button-text" href="/2016/05/30/ajax-cant-access-origin-resource.html" itemprop="url">Read more</a>
+        <a class="post-title-link uk-button uk-button-text" href="http://localhost:4000/2016/05/30/ajax-cant-access-origin-resource.html" itemprop="url">Read more</a>
 
         
       </div>
@@ -464,19 +462,19 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
       2016-05-30
       
       <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
-      
+
       
       code
       
-      
+
       
       
     </div>
     
   </article>
-</div> 
+</div>
 
-  
+
 
   <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
 
@@ -486,7 +484,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
      
      <h2 class="uk-text-title uk-margin-small-bottom">
       
-      <a class="post-title-link uk-link-reset" href="/2016/04/28/iOS-Lightweight-Generice.html" itemprop="url">iOS 泛型（Lightweight Generice）的使用</a>
+      <a class="post-title-link uk-link-reset" href="http://localhost:4000/2016/04/28/iOS-Lightweight-Generice.html" itemprop="url">iOS 泛型（Lightweight Generice）的使用</a>
       
     </h2>
     <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">Lightweight Generics 轻量级泛型，纯编译器的语法支持，不借助任何objc runtime的升级。即，完全向下兼容（兼容更低的iOS版本）。</p>
@@ -498,7 +496,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
     <div class="uk-margin-small">
       <div>
         
-        <a class="post-title-link uk-button uk-button-text" href="/2016/04/28/iOS-Lightweight-Generice.html" itemprop="url">Read more</a>
+        <a class="post-title-link uk-button uk-button-text" href="http://localhost:4000/2016/04/28/iOS-Lightweight-Generice.html" itemprop="url">Read more</a>
 
         
       </div>
@@ -509,13 +507,13 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
       2016-04-28
       
       <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
-      
+
       
       iOS
       
       Objective-c
       
-      
+
       
       
       <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-location-arrow" aria-hidden="true"></i></div>
@@ -524,9 +522,9 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
     </div>
     
   </article>
-</div> 
+</div>
 
-  
+
 
   <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
 
@@ -536,7 +534,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
      
      <h2 class="uk-text-title uk-margin-small-bottom">
       
-      <a class="post-title-link uk-link-reset" href="/2016/04/17/centos-6.4-x32-install-mysql.html" itemprop="url">CentOS 6.4 x32 安装 MySQL</a>
+      <a class="post-title-link uk-link-reset" href="http://localhost:4000/2016/04/17/centos-6.4-x32-install-mysql.html" itemprop="url">CentOS 6.4 x32 安装 MySQL</a>
       
     </h2>
     <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">MySQL安装
@@ -555,7 +553,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
     <div class="uk-margin-small">
       <div>
         
-        <a class="post-title-link uk-button uk-button-text" href="/2016/04/17/centos-6.4-x32-install-mysql.html" itemprop="url">Read more</a>
+        <a class="post-title-link uk-button uk-button-text" href="http://localhost:4000/2016/04/17/centos-6.4-x32-install-mysql.html" itemprop="url">Read more</a>
 
         
       </div>
@@ -566,19 +564,19 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
       2016-04-17
       
       <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
-      
+
       
       code
       
-      
+
       
       
     </div>
     
   </article>
-</div> 
+</div>
 
-  
+
 
   <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
 
@@ -588,7 +586,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
      
      <h2 class="uk-text-title uk-margin-small-bottom">
       
-      <a class="post-title-link uk-link-reset" href="/2016/03/22/the-server-quit-without-updating-pid-file.html" itemprop="url">The server quit without updating PID file.</a>
+      <a class="post-title-link uk-link-reset" href="http://localhost:4000/2016/03/22/the-server-quit-without-updating-pid-file.html" itemprop="url">The server quit without updating PID file.</a>
       
     </h2>
     <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">今天在命令行启动MySQL的时候, 报了一个错误, 无法启动. 如下.
@@ -607,7 +605,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
     <div class="uk-margin-small">
       <div>
         
-        <a class="post-title-link uk-button uk-button-text" href="/2016/03/22/the-server-quit-without-updating-pid-file.html" itemprop="url">Read more</a>
+        <a class="post-title-link uk-button uk-button-text" href="http://localhost:4000/2016/03/22/the-server-quit-without-updating-pid-file.html" itemprop="url">Read more</a>
 
         
       </div>
@@ -618,19 +616,19 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
       2016-03-22
       
       <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
-      
+
       
       code
       
-      
+
       
       
     </div>
     
   </article>
-</div> 
+</div>
 
-  
+
 
   <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
 
@@ -640,7 +638,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
      
      <h2 class="uk-text-title uk-margin-small-bottom">
       
-      <a class="post-title-link uk-link-reset" href="/2015/12/06/memcache-introduce.html" itemprop="url">Memcache简单介绍</a>
+      <a class="post-title-link uk-link-reset" href="http://localhost:4000/2015/12/06/memcache-introduce.html" itemprop="url">Memcache简单介绍</a>
       
     </h2>
     <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">最近在学习有关缓存的一些知识，了解到有Memcache和Redis，那我先来介绍一下我目前了解到Memcache吧。有些人可能会在网上看到Memcache和Memcached这两个词，这两个个东西其实不必太在意，只不过Memcache是这个项目的名称，而Memcached是项目的服务端主程序名称。
@@ -659,7 +657,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
     <div class="uk-margin-small">
       <div>
         
-        <a class="post-title-link uk-button uk-button-text" href="/2015/12/06/memcache-introduce.html" itemprop="url">Read more</a>
+        <a class="post-title-link uk-button uk-button-text" href="http://localhost:4000/2015/12/06/memcache-introduce.html" itemprop="url">Read more</a>
 
         
       </div>
@@ -670,19 +668,19 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
       2015-12-06
       
       <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
-      
+
       
       code
       
-      
+
       
       
     </div>
     
   </article>
-</div> 
+</div>
 
-  
+
 
   <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
 
@@ -692,7 +690,7 @@ SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
      
      <h2 class="uk-text-title uk-margin-small-bottom">
       
-      <a class="post-title-link uk-link-reset" href="/jekyll/theme/2015/11/15/the-murmur-theme.html" itemprop="url">The Murmur Theme</a>
+      <a class="post-title-link uk-link-reset" href="http://localhost:4000/jekyll/theme/2015/11/15/the-murmur-theme.html" itemprop="url">The Murmur Theme</a>
       
     </h2>
     <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">
@@ -707,7 +705,7 @@ Landing somewhere between a scholarly publication and an adventurers notebook, t
     <div class="uk-margin-small">
       <div>
         
-        <a class="post-title-link uk-button uk-button-text" href="/jekyll/theme/2015/11/15/the-murmur-theme.html" itemprop="url">Read more</a>
+        <a class="post-title-link uk-button uk-button-text" href="http://localhost:4000/jekyll/theme/2015/11/15/the-murmur-theme.html" itemprop="url">Read more</a>
 
         
       </div>
@@ -724,7 +722,7 @@ Landing somewhere between a scholarly publication and an adventurers notebook, t
     </div>
     
   </article>
-</div> 
+</div>
 
 
 <div class="uk-padding-small">
@@ -765,9 +763,8 @@ Landing somewhere between a scholarly publication and an adventurers notebook, t
 
 
 
-
-      </div>
-                 <div class="uk-width-1 uk-text-center uk-padding-small uk-text-small uk-text-left">
+          </div>
+          <div class="uk-width-1 uk-text-center uk-padding-small uk-text-small uk-text-left">
 	
 	
 	 &copy; 1970 Later
@@ -775,24 +772,22 @@ Landing somewhere between a scholarly publication and an adventurers notebook, t
 	 	>Later</a></p>
 </div>
 
-
-      
-     </div>
-       <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
-        <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
-            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
-
         </div>
-</div>
-     </div>
+        <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
+          <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
+            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
+          </div>
+        </div>
+      </div>
     </div>
-      
+    
 
   
   <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
   <script>AV.initialize("TEv9SLGVuokoA9S9hEJ4YdW3-gzGzoHsz", "FB770fG9JNXEB42O9KEOeFCT");</script>
   <script>
     function showTime(Counter) {
+
       var query = new AV.Query(Counter);
       var entries = [];
       var $visitors = $(".leancloud_visitors");
@@ -895,7 +890,6 @@ Landing somewhere between a scholarly publication and an adventurers notebook, t
 
 
 
+  </body>
+  </html>
 
-
- </body>
- </html>

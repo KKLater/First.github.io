@@ -19,9 +19,6 @@
 
   <link rel="stylesheet" type="text/css" href="{{ "/assets/css/paginator.css" | prepend: site.baseurl }}">
 
-
-
-
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
 
@@ -41,7 +38,7 @@
      hljs.initHighlightingOnLoad();
   </script>
   <script type="text/javascript" src="{{ "/assets/js/jquery-3.2.1.min.js" | prepend: site.baseurl }}"></script>
-        <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid={{ site.youyan_uid }}"></script>
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid={{ site.youyan_uid }}"></script>
 
   <script type="text/javascript">
 
@@ -56,63 +53,49 @@
     }
 
   } 
- window.onscroll =  function()
- {
+  window.onscroll =  function()
+  {
     var winHeight = 0;
     if (window.innerHeight) {
       winHeight = window.innerHeight;
     } else if ((document.body) && (document.body.clientHeight)) {
       winHeight = document.body.clientHeight;
     }
-var height = $(document).scrollTop(); 
+    var height = $(document).scrollTop(); 
 
 
-if (height > 10) {
+    if (height > 10) {
      $('.scroll-top-button').removeClass('uk-hidden');
 
-    $('.scroll-top-button').addClass('uk-visible');
-} else {
+     $('.scroll-top-button').addClass('uk-visible');
+   } else {
     $('.scroll-top-button').removeClass('uk-visible');
 
     $('.scroll-top-button').addClass('uk-hidden');
-}   
- }
-
+  }   
+}
 </script>
-
 </head>
-
 <body>
-
-    <div>
-      <!-- <div id="wrapper"> -->
+  <div>
       {% include header.html %}
-        <div class="uk-offcanvas-content">
+      <div class="uk-offcanvas-content">
 
 
-      <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
-        <div class="uk-margin-small-left uk-margin-small-right">
-
-        
-          {{ content }}
-
-      </div>
-                 {% include footer.html %}
-
-      
-     </div>
-       <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
-        <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
-            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
-
+        <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
+          <div class="uk-margin-small-left uk-margin-small-right">            
+            {{ content }}
+          </div>
+          {% include footer.html %}
         </div>
-</div>
-     </div>
+        <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
+          <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
+            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
+          </div>
+        </div>
+      </div>
     </div>
-          {% include third/lean-analytics.html %}
-
-
- </body>
-
- </html>
+    {% include third/lean-analytics.html %}
+  </body>
+  </html>
 
