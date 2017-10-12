@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>首页</title>
+
+
+
+  <!-- UIkit CSS -->
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/highlight/styles/tomorrow-night.css">
+
+  <!-- jQuery is required -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit-icons.min.js"></script>
+
+
+  <script src=" /assets/highlight/highlight.pack.js "></script>
+  <script>
+     hljs.initHighlightingOnLoad();
+  </script>
+  <script type="text/javascript" src="/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+
+   window.onload = function()
+   { 
+
+    var winWidth = 0;
+    if (window.innerWidth) {
+      winWidth = window.innerWidth;
+    } else if ((document.body) && (document.body.clientWidth)) {
+      winWidth = document.body.clientWidth;
+    }
+
+  } 
+ window.onscroll =  function()
+ {
+    var winHeight = 0;
+    if (window.innerHeight) {
+      winHeight = window.innerHeight;
+    } else if ((document.body) && (document.body.clientHeight)) {
+      winHeight = document.body.clientHeight;
+    }
+var height = $(document).scrollTop(); 
+
+
+if (height > 10) {
+     $('.scroll-top-button').removeClass('uk-hidden');
+
+    $('.scroll-top-button').addClass('uk-visible');
+} else {
+    $('.scroll-top-button').removeClass('uk-visible');
+
+    $('.scroll-top-button').addClass('uk-hidden');
+}   
+ }
+
+</script>
+
+</head>
+
+<body>
+
+    <div>
+      <!-- <div id="wrapper"> -->
+      
+<div uk-sticky class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed uk-active uk-sticky-below">
+	<div class=" uk-container uk-container-expand  ls-container" >
+		<nav class="uk-navbar ls-navbar  uk-width-1" style="max-width: 640px">
+			<div class="uk-navbar-left">
+				<a class="uknavbar--item uk-logo ls-logo" href="/">大白的日常</a>
+			</div>
+			<div class="uk-navbar-right uk-visible@s">
+				<ul class="uk-navbar-nav">
+					
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/">POST</a></li>
+					
+
+
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/archive">ARCHIVE</a></li>
+					
+
+
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/tags">TAGS</a></li>
+					
+
+
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/links">LINKS</a></li>
+					
+
+
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/about">ABOUT</a></li>
+					
+
+
+					
+					
+				</ul>
+			</div>
+			<div class="uk-navbar-right uk-hidden@s">
+				<a class="uk-navbar-toggle" style="height: 64px" uk-icon="icon: menu"></a>
+				<div uk-dropdown="mode: click;">
+					<ul class="uk-nav  uk-dropdown-nav">
+						
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/">POST</a></li>
+					
+						<!-- <li><a href="/">POST</a></li> -->
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/archive">ARCHIVE</a></li>
+					
+						<!-- <li><a href="/archive">ARCHIVE</a></li> -->
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/tags">TAGS</a></li>
+					
+						<!-- <li><a href="/tags">TAGS</a></li> -->
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/links">LINKS</a></li>
+					
+						<!-- <li><a href="/links">LINKS</a></li> -->
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/about">ABOUT</a></li>
+					
+						<!-- <li><a href="/about">ABOUT</a></li> -->
+
+						
+						
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+	</div>
+</div>
+
+        <div class="uk-offcanvas-content">
+
+
+      <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
+        <div class="uk-margin-small-left uk-margin-small-right">
+
+        
+          
+
+
+  
+    
+
+    <!--  -->
+  
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/assets/css/post.css">
+<div  class="uk-width-1 uk-child-width-1 uk-margin-auto uk-grid-medium" style="max-width: 640px" uk-grid>
+
+	<div class="uk-width-4-5">
+		<div  class="uk-margin-small-left uk-margin-medium-top uk-text-large uk-text-uppercase">
+			浏览器中异步打开新标签页
+		</div>
+
+		<div class="uk-margin-small uk-margin-small-left uk-text-uppercase" >
+			<div class="uk-article-meta uk-text-small uk-text-uppercase" uk-grid>
+				<div class="uk-margin-small-right">
+					<i class="fa fa-calendar" aria-hidden="true"></i>
+				</div>
+				2016-08-28
+				
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="uk-width-1-5">
+		<div class="uk-width-auto uk-text-large uk-text-muted" style="font-size: 3em">
+			
+		</div>
+	</div>
+	<div class="uk-grid-match " >
+		<article class="uk-card uk-card-default uk-card-body">
+			<p>最近在做项目，需要异步获取服务器端返回的URL，然后在新的标签页中打开该URL（不要问我为什么不在当前页面加载，因为种种原因，用户不希望这个页面消失，只想在新标签页中处理工作，和我们的需求有很大关系）。然后发现各种问题，有的浏览器可以，但是有的浏览器被拦截，甚至有的浏览器既不被拦截又一点反应没有。</p>
+
+<p>主要原因是，当 window.open 为用户触发事件内部或者加载时，不会被拦截，一旦将弹出代码移动到 ajax 或者一段异步代码内部，马上就出现被拦截的表现了，因为浏览器认为这是不安全的行为，默认都会被拦截。</p>
+
+<p>在网上找了些资料，多多少少会有些问题，可能是我的姿势不对。</p>
+
+<p>最后实现代码如下：</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">// open a new blank tab</span>
+<span class="kd">var</span> <span class="nx">createNewInterviewTab</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">open</span><span class="p">(</span><span class="s1">'about:blank'</span><span class="p">,</span> <span class="s1">'_blank'</span><span class="p">);</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+    <span class="c1">// ...</span>
+<span class="p">}).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">status</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">result</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">redirect</span><span class="p">;</span>
+        <span class="c1">// async open a new tab</span>
+        <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nx">createNewInterviewTab</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+        <span class="p">},</span> <span class="mi">100</span><span class="p">);</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// close the blank tab</span>
+        <span class="nx">createNewInterviewTab</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</code></pre>
+</div>
+
+<p>到这里就结束了，就酱。</p>
+
+<p><strong>参考</strong></p>
+
+<ul>
+  <li><a href="http://itindex.net/detail/52877-window.open-%E6%B5%8F%E8%A7%88%E5%99%A8">window.open被浏览器拦截的解决方案</a></li>
+</ul>
+
+		</article>
+
+		<div style="padding-top: 20px">
+			
+<ul class="uk-pagination uk-child-width-1-2 uk-text-small">
+    <li>
+        
+
+        
+
+        <a href="/diary/2016/10/12/markdown-manual.html"><span class="uk-margin-small-right" uk-pagination-previous></span> Markdown</a>
+
+        
+        
+
+    </li>
+
+    <li class="uk-text-right">
+
+        
+        
+
+        <a href="/jekyll/pixyll/2016/07/29/AssetsLibrary-and-PhotosKit.html">关于AssetsLibrary和P... <span class="uk-margin-small-left" uk-pagination-next></span></a>
+
+        
+        
+
+    </li>
+</ul>
+		</div>
+	</div>
+</div>
+
+  <div class="comments" id="comments">
+
+      <div id="uyan_frame"></div>
+
+  </div>
+
+
+     
+             <span id="" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                                  <span class="post-meta-item-text">0 </span>
+
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+
+
+
+      </div>
+                 <div class="uk-width-1 uk-text-center uk-padding-small uk-text-small uk-text-left">
+	
+	
+	 &copy; 1970 Later
+	 <p>Powered by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="http://jekyll.com.cn">Jekyll</a> . Theme by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="/"
+	 	>Later</a></p>
+</div>
+
+
+      
+     </div>
+       <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
+        <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
+            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
+
+        </div>
+</div>
+     </div>
+    </div>
+      
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TEv9SLGVuokoA9S9hEJ4YdW3-gzGzoHsz", "FB770fG9JNXEB42O9KEOeFCT");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+
+
+ </body>
+ </html>

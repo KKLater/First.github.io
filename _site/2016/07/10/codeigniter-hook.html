@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>首页</title>
+
+
+
+  <!-- UIkit CSS -->
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/highlight/styles/tomorrow-night.css">
+
+  <!-- jQuery is required -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit-icons.min.js"></script>
+
+
+  <script src=" /assets/highlight/highlight.pack.js "></script>
+  <script>
+     hljs.initHighlightingOnLoad();
+  </script>
+  <script type="text/javascript" src="/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+
+   window.onload = function()
+   { 
+
+    var winWidth = 0;
+    if (window.innerWidth) {
+      winWidth = window.innerWidth;
+    } else if ((document.body) && (document.body.clientWidth)) {
+      winWidth = document.body.clientWidth;
+    }
+
+  } 
+ window.onscroll =  function()
+ {
+    var winHeight = 0;
+    if (window.innerHeight) {
+      winHeight = window.innerHeight;
+    } else if ((document.body) && (document.body.clientHeight)) {
+      winHeight = document.body.clientHeight;
+    }
+var height = $(document).scrollTop(); 
+
+
+if (height > 10) {
+     $('.scroll-top-button').removeClass('uk-hidden');
+
+    $('.scroll-top-button').addClass('uk-visible');
+} else {
+    $('.scroll-top-button').removeClass('uk-visible');
+
+    $('.scroll-top-button').addClass('uk-hidden');
+}   
+ }
+
+</script>
+
+</head>
+
+<body>
+
+    <div>
+      <!-- <div id="wrapper"> -->
+      
+<div uk-sticky class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed uk-active uk-sticky-below">
+	<div class=" uk-container uk-container-expand  ls-container" >
+		<nav class="uk-navbar ls-navbar  uk-width-1" style="max-width: 640px">
+			<div class="uk-navbar-left">
+				<a class="uknavbar--item uk-logo ls-logo" href="/">大白的日常</a>
+			</div>
+			<div class="uk-navbar-right uk-visible@s">
+				<ul class="uk-navbar-nav">
+					
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/">POST</a></li>
+					
+
+
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/archive">ARCHIVE</a></li>
+					
+
+
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/tags">TAGS</a></li>
+					
+
+
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/links">LINKS</a></li>
+					
+
+
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/about">ABOUT</a></li>
+					
+
+
+					
+					
+				</ul>
+			</div>
+			<div class="uk-navbar-right uk-hidden@s">
+				<a class="uk-navbar-toggle" style="height: 64px" uk-icon="icon: menu"></a>
+				<div uk-dropdown="mode: click;">
+					<ul class="uk-nav  uk-dropdown-nav">
+						
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/">POST</a></li>
+					
+						<!-- <li><a href="/">POST</a></li> -->
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/archive">ARCHIVE</a></li>
+					
+						<!-- <li><a href="/archive">ARCHIVE</a></li> -->
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/tags">TAGS</a></li>
+					
+						<!-- <li><a href="/tags">TAGS</a></li> -->
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/links">LINKS</a></li>
+					
+						<!-- <li><a href="/links">LINKS</a></li> -->
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/about">ABOUT</a></li>
+					
+						<!-- <li><a href="/about">ABOUT</a></li> -->
+
+						
+						
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+	</div>
+</div>
+
+        <div class="uk-offcanvas-content">
+
+
+      <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
+        <div class="uk-margin-small-left uk-margin-small-right">
+
+        
+          
+
+
+  
+    
+
+    <!--  -->
+  
+
+
+
+
+<link rel="stylesheet" type="text/css" href="/assets/css/post.css">
+<div  class="uk-width-1 uk-child-width-1 uk-margin-auto uk-grid-medium" style="max-width: 640px" uk-grid>
+
+	<div class="uk-width-4-5">
+		<div  class="uk-margin-small-left uk-margin-medium-top uk-text-large uk-text-uppercase">
+			CodeIgniter 钩子
+		</div>
+
+		<div class="uk-margin-small uk-margin-small-left uk-text-uppercase" >
+			<div class="uk-article-meta uk-text-small uk-text-uppercase" uk-grid>
+				<div class="uk-margin-small-right">
+					<i class="fa fa-calendar" aria-hidden="true"></i>
+				</div>
+				2016-07-10
+				
+				<div class="uk-margin-left uk-margin-small-right uk-margin-top-remove">
+					<i class="fa fa-tags" aria-hidden="true"></i>
+				</div>
+				
+				code
+				
+				
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="uk-width-1-5">
+		<div class="uk-width-auto uk-text-large uk-text-muted" style="font-size: 3em">
+			
+		</div>
+	</div>
+	<div class="uk-grid-match " >
+		<article class="uk-card uk-card-default uk-card-body">
+			<h2 id="简介">简介</h2>
+
+<p>CodeIgniter 在启动的过程中，可以在某个地方让它自动的执行自己编写的函数，完成一个特定的功能，或者说成是脚本，这个时候就需要 CodeIgniter 中的钩子扩展。突然觉得和 Spring 中的 AOP 面向切面（Aspect）很类似，就是说在系统执行的什么时候会自动的执行其他功能代码，例如Before(前) 、
+After-returning(返回后) 、After-throwing(抛出后)、Introduction(引入)。</p>
+
+<h2 id="启用钩子">启用钩子</h2>
+
+<ol>
+  <li>
+    <p>在 application/config/config.php 文件里找到 $config[‘enable_hooks’] = FALSE,将 FALSE 改 TRUE ，启动钩子。</p>
+
+    <div class="language-php highlighter-rouge"><pre class="highlight"><code> $config['enable_hooks'] = TRUE;
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>在 application/hooks 文件夹(没有自已新建)新建一任意文件名 TestHook.php 。</p>
+
+    <div class="language-php highlighter-rouge"><pre class="highlight"><code> <span class="cp">&lt;?php</span>
+ <span class="k">class</span> <span class="nc">TestHook</span><span class="p">{</span>
+     <span class="k">function</span> <span class="nf">display</span><span class="p">(){</span>
+           <span class="k">echo</span> <span class="s2">"Hello Hook"</span><span class="p">;</span>
+     <span class="p">}</span>
+ <span class="p">}</span>
+ <span class="cp">?&gt;</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>回到 application/config/hooks.php 里添加几行代码如下：</p>
+
+    <div class="language-php highlighter-rouge"><pre class="highlight"><code> $hook['pre_controller'] = array(
+     'class'    =&gt; 'MyClass',
+     'function' =&gt; 'Myfunction',
+     'filename' =&gt; 'Myclass.php',
+     'filepath' =&gt; 'hooks',
+     'params'   =&gt; array('beer', 'wine', 'snacks')
+ );
+ // 注意
+ // 这里可以同时定义多个钩子，只需要另起一段编写类似的代码即可。
+ // 只需要将钩子数组变成二维数组即可。
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<p>Demo:</p>
+
+<blockquote>
+
+  <div class="language-php highlighter-rouge"><pre class="highlight"><code>// TestHook.php
+<span class="cp">&lt;?php</span>
+<span class="k">class</span> <span class="nc">TestHook</span><span class="p">{</span>
+    <span class="k">function</span> <span class="nf">display</span><span class="p">(){</span>
+          <span class="k">echo</span> <span class="s2">"Hello Hook"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span>
+</code></pre>
+  </div>
+
+  <div class="language-php highlighter-rouge"><pre class="highlight"><code>// application/config/hooks.php
+$hook['post_controller'][] = array(
+	'class' =&gt; 'TestHook',
+	'function' =&gt; 'display',
+	'filename' =&gt; 'TestHook.php',
+	'filepath' =&gt; 'hooks',
+	'params'   =&gt; array()
+);
+</code></pre>
+  </div>
+</blockquote>
+
+<p><strong>注意：</strong></p>
+
+<ul>
+  <li>class 你希望调用的类名，如果你更喜欢使用过程式的函数的话，这一项可以留空。</li>
+  <li>function 你希望调用的方法或函数的名称。</li>
+  <li>filename 包含你的类或函数的文件名。</li>
+  <li>filepath 包含你的脚本文件的目录名。 注意： 你的脚本必须放在 application/ 目录里面，所以 filepath 是相对 application/ 目录的路径，举例来说，如果你的脚本位于 application/hooks/ ，那么 filepath 可以简单的设置为 ‘hooks’ ，如果你的脚本位于 application/hooks/utilities/ ， 那么 filepath 可以设置为 ‘hooks/utilities’ ，路径后面不用加斜线。</li>
+  <li>params 你希望传递给你脚本的任何参数，可选。</li>
+</ul>
+
+<h2 id="挂钩点">挂钩点</h2>
+
+<ul>
+  <li>pre_system 在系统执行的早期调用，这个时候只有 基准测试类 和 钩子类 被加载了， 还没有执行到路由或其他的流程。</li>
+  <li>pre_controller 在你的控制器调用之前执行，所有的基础类都已加载，路由和安全检查也已经完成。</li>
+  <li>post_controller_constructor 在你的控制器实例化之后立即执行，控制器的任何方法都还尚未调用。</li>
+  <li>post_controller 在你的控制器完全运行结束时执行。</li>
+  <li>display_override 覆盖 _display() 方法，该方法用于在系统执行结束时向浏览器发送最终的页面结果。 这可以让你有自己的显示页面的方法。注意你可能需要使用 $this-&gt;CI =&amp; get_instance() 方法来获取 CI 超级对象，以及使用 $this-&gt;CI-&gt;output-&gt;get_output() 方法来 获取最终的显示数据。</li>
+  <li>cache_override 使用你自己的方法来替代 输出类 中的 _display_cache() 方法，这让你有自己的缓存显示机制。</li>
+  <li>post_system 在最终的页面发送到浏览器之后、在系统的最后期被调用。</li>
+</ul>
+
+		</article>
+
+		<div style="padding-top: 20px">
+			
+<ul class="uk-pagination uk-child-width-1-2 uk-text-small">
+    <li>
+        
+
+        
+
+        <a href="/jekyll/pixyll/2016/07/29/AssetsLibrary-and-PhotosKit.html"><span class="uk-margin-small-right" uk-pagination-previous></span> 关于AssetsLibr...</a>
+
+        
+        
+
+    </li>
+
+    <li class="uk-text-right">
+
+        
+        
+
+        <a href="/2016/06/19/remote-host-identification-has-changed.html">REMOTE HOST IDENT... <span class="uk-margin-small-left" uk-pagination-next></span></a>
+
+        
+        
+
+    </li>
+</ul>
+		</div>
+	</div>
+</div>
+
+  <div class="comments" id="comments">
+
+      <div id="uyan_frame"></div>
+
+  </div>
+
+
+     
+             <span id="" class="leancloud_visitors" data-flag-title="">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                                  <span class="post-meta-item-text">0 </span>
+
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+
+
+
+      </div>
+                 <div class="uk-width-1 uk-text-center uk-padding-small uk-text-small uk-text-left">
+	
+	
+	 &copy; 1970 Later
+	 <p>Powered by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="http://jekyll.com.cn">Jekyll</a> . Theme by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="/"
+	 	>Later</a></p>
+</div>
+
+
+      
+     </div>
+       <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
+        <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
+            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
+
+        </div>
+</div>
+     </div>
+    </div>
+      
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TEv9SLGVuokoA9S9hEJ4YdW3-gzGzoHsz", "FB770fG9JNXEB42O9KEOeFCT");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+
+
+ </body>
+ </html>

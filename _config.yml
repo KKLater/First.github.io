@@ -1,0 +1,99 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+# 
+# About blog
+title: Your awesome title
+
+# About Author
+author: Later
+avatar: assets/avatar.gif
+# avatar: http://ouo0w16s7.bkt.clouddn.com/IMG_0754.JPG?e=1505118402&token=tYezop22TZHJ2SRLGu2c2pc_DIsOrZZ3JfZjeV5-:c2MkMIWAfzw5pPmwPci1MjBW0u4
+email: your-email@example.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl:
+url: http://www.lshxin.com/First.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
+encoding:     "utf-8"
+twitter_username: jekyllrb
+github_username:  jekyll
+
+copyright:
+  - "2017"
+  - Later
+
+
+# Build settings
+# markdown: kramdown
+# kramdown:
+#     input: GFM
+
+highlighter: rouge
+
+
+plugins:
+  # - jekyll-feed
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: page:num
+
+menus: 
+  POST : /
+  ARCHIVE : /archive
+  TAGS : /tags
+  LINKS : /links
+  ABOUT : /about
+
+
+links:
+  网络连接: 
+    百度: https://www.baidu.com
+    谷歌: https://www.google.com
+  公司链接:
+    越野e族: http://www.fblife.com
+  
+
+# sass:
+#     sass_dir: _sass
+#     style: compressed
+css: assets/css
+js: assets/js
+images: assets/images
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+
+# Show number of visitors to each article.
+# You can visit https://leancloud.cn get AppID and AppKey.
+leancloud_visitors:
+  enable: true
+  app_id: TEv9SLGVuokoA9S9hEJ4YdW3-gzGzoHsz
+  app_key: FB770fG9JNXEB42O9KEOeFCT
+
+
+youyan_uid: 2144594

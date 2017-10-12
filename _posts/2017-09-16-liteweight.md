@@ -1,0 +1,199 @@
+---
+layout: post
+title: 集合与泛型
+date: 2017-09-16 18:05:14
+---
+[TOC]
+###集合类型:
+* ArrayList
+* TreeSet
+    * 以有序状态保持并可防止重复
+* HashMap
+    * 可用成对的`name/value`来保存与取出
+* LinkedList
+    * 针对经常插入或删除中间元素所涉及的高效率集合。(实际上ArrayList还是比较实用)
+* HashSet
+    * 防止重复的集合，可快速地找寻相符的元素
+* LinkedHashMap
+    * 类似HashMap，但可记住元素插入的顺序，也可以设定成依照元素上次存取的先后来排序
+- - - - -
+###关于排序
+`TreeSet`与`Collections`均有排序方法。但是，`TreeSet`总会依次排序，当你插入过着删除一个元素时，总需要耗时进行排序，故而有效率考虑因素。故而一般性使用`Collections`比较好些。可以调用`Collections.sort()`进行排序。
+例如对歌曲名单进行排序:
+```Java
+//class  Song
+public class Song implements Comparable<Song> {
+    String title;
+    String artist;
+    String rating;
+    String bpm;
+
+    public int compareTo(Song s) {
+        return title.compareTo(s.getTitle());
+    }
+    Song(String t, String a, String r, String b) {
+        title = t;
+        artist = a;
+        rating = r;
+        bpm = b;
+    }
+
+    /**
+     * @return the title
+     */
+    public String getTitle() {
+        return title;
+    }
+
+    /**
+     * @return the artist
+     */
+    public String getArtist() {
+        return artist;
+    }
+    
+    /**
+     * @return the rating
+     */
+    public String getRating() {
+        return rating;
+    }
+    /**
+     * @return the bpm
+     */
+    public String getBpm() {
+        return bpm;
+    }
+
+    @Override
+    public String toString() {
+        return title;
+    }
+}
+
+//class  Jukebox
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.io.File;
+
+public class Jukebox {
+    ArrayList<Song> songList  = new ArrayList<Song>();
+    public static void main(String[] args) {
+        new Jukebox().go();
+    }
+    class ArtistCompare implements Comparator<Song> {
+        public int compare(Song one, Song two) {
+            return one.getArtist().compareTo(two.getArtist());
+        }
+    }
+    public void go() {
+        getSongs();
+        System.out.println(songList);
+        ArtistCompare artistCompare = new ArtistCompare();
+        Collections.sort(songList, artistCompare);
+        System.out.println(songList);
+    }
+    private void getSongs() {
+        try {
+            File file = new File("Songlist.text");
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                addSong(line);
+            }
+        } catch (Exception e) {
+            //TODO: handle exception
+            e.printStackTrace();
+        }
+    }
+    private void addSong(String lineToParse) {
+        String[] tokens = lineToParse.split("/");
+        Song nextSong = new Song(tokens[0], tokens[1], tokens[2], tokens[3]);
+        songList.add(nextSong);
+    }
+}
+```
+Collection的API说明文件中，涉及到3个主要的接口:List\Set\Map。
+<!--/ style="text-align:left; color:red" /-->
+LIST
+<!--/-->
+
+>一种知道索引位置的集合。知道某物在系列集合中的位置。可以有多个元素引用相同的对象。是对付顺序的好帮手。
+<!--/ style="text-align:left; color:red" /-->
+SET
+<!--/-->
+
+>不允许重复的集合。知道某物是否已经存在于集合中，不会有多个元素引用相同的对象(被认为相等的两个对象也不行)
+<!--/ style="text-align:left; color:red" /-->
+MAP
+<!--/-->
+
+> 使用成对的键值和数据值。`MAP`会维护与`key`有关联的值。两个`key`可以引用相同的对象，但是`key`不能重复。典型的`key`是`String`，但也可以是任何对象。
+
+###Collection API
+* Collection(interface)
+    * Set(interface)
+        *   SortedSet(interface)
+            * TreeSet
+        * LinkedHashSet
+        * Hashset
+    * List(interface)
+        * ArrayList
+        * LinkedList
+        * Vector
+* Map(interface)
+    * SortedMap(interface)
+        * TreeMap
+    * HashMap
+    * LinkedHashMap
+    * HashTable
+- - - - -
+###对象相等
+* 引用相等性
+     > - 堆上同一对象的两个引用。引用到堆上同一个对象的两个引用是相等的。
+     > - 如果要知道两个引用是否相等，可以使用`==`来比较两个变量上的字节组合。如果引用到相同的对象，字节组合会一样
+* 对象相等性
+    > - 堆上的两个不同对象在意义上是相同的。
+    > - 如果你想要把两个不同的对象视为相等的，就必须覆盖过从`Object`继承下来的`hashCode()`方法与`equals()`方法。
+    > - 因为计算的内存问题，必须覆盖过`hashCode`才能确保两个对象有相同的`hashcode`，也就确保以另一个对象为参数的`equals()`调用会返回`true`。
+
+* hashCode()与equals()的相关规定
+    > 1、如果两个对象相等，则`hashcode`必须相等。
+    > 2、如果两个对象相等，对其中一个对象调用`equals()`必须返回`true`。也就是说，若`a.equals(b)`，则`b.equals(a)`。
+    > 3、如果两个对象有相同的`hashcode`值，他们也不一定是相等的。单若两个对象相等，则`hashcode`值一定不相等。
+    > 4、因此若`equals()`被覆盖过，则`hashcode()`也必须被覆盖。
+    > 5、`hashcode()`的默认行为是对在`heap`上的对象产生独特的值。如果你没有`override`过`hashcode`。则该`class`的两个对象怎样都不会被认为是相同的。
+    > 6、`equals()`默认行为是执行`==`的比较。也就是说会去测试两个引用是否堆上`heap`上同一个对象。如果`equals()`没有被覆盖，两个对象永远都不会被视为相同，因为不同的对象有不同的字节组合。
+
+ **`a.equals(b)`必须与`a.hashCode() == b.hashCode()`等值。但 `a.hashCode() == b.hashCode()`不一定要与`a.eqals()`等值。**
+* 要保持有序可以使用`TreeSet`，但是使用时下列其中一项必须为真。
+    > - 集合的元素必须是有实现`Comparable`的类型。
+    > - 使用重载、取用`Comparator`参数的构造函数来创建`TreeSet`。
+
+- - - - -
+###泛型
+**数组的类型是在运行期间检查的，但是集合的类型检查只会发生在编译期间。**
+**万用符号可以帮助创建出接收父类子型参数的方法**
+```Java
+public void takeAnimals(ArrayList<? extends Animal>) animals) {
+    //extens同时代表继承和实现。如果要取用有实现 Pet 这个接口类型的 ArrayList，也是这样声明:ArrayList<? extends Pet>
+    for (Animal a: animals) {
+        a.eta();
+    }
+}
+```
+* 注意:
+> - 在方法参数中，使用万用字符时，编译器会组织任何可能破坏引用参数所指集合的行为。
+> - 你能够调用 list 中任何元素的方法，但不能加入元素。也就是说，你可以操作集合元素，饭不能新增集合元素。如此保障执行期间的安全性，因为编辑器会组织执行器的恐怖行为。
+* 其他方法:
+```Java
+//下两种一样
+public <T extends Animal> void takeThing(ArrayList<T> list);
+public void takeThing(ArrayList<? extends Animal> list);
+//下两种一样
+public <T extends Animal> void takeThing(ArrayList<T> one , ArrayList<T> two)；
+public void takeThing(ArrayList<? extends Animal> one, ArrayList<? extends Animal> two);
+```

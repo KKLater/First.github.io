@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>首页</title>
+
+
+
+  <!-- UIkit CSS -->
+
+  <link rel="stylesheet" type="text/css" href="{{ "/assets/uikit/css/uikit.css" | prepend: site.baseurl }}">
+
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="{{ "/assets/highlight/styles/tomorrow-night.css" | prepend: site.baseurl }}">
+
+  <!-- jQuery is required -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit-icons.min.js"></script>
+
+
+  <script src=" {{ "/assets/highlight/highlight.pack.js" | prepend: site.baseurl }} "></script>
+  <script>
+     hljs.initHighlightingOnLoad();
+  </script>
+  <script type="text/javascript" src="/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+
+   window.onload = function()
+   { 
+
+    var winWidth = 0;
+    if (window.innerWidth) {
+      winWidth = window.innerWidth;
+    } else if ((document.body) && (document.body.clientWidth)) {
+      winWidth = document.body.clientWidth;
+    }
+
+  } 
+ window.onscroll =  function()
+ {
+    var winHeight = 0;
+    if (window.innerHeight) {
+      winHeight = window.innerHeight;
+    } else if ((document.body) && (document.body.clientHeight)) {
+      winHeight = document.body.clientHeight;
+    }
+var height = $(document).scrollTop(); 
+
+
+if (height > 10) {
+     $('.scroll-top-button').removeClass('uk-hidden');
+
+    $('.scroll-top-button').addClass('uk-visible');
+} else {
+    $('.scroll-top-button').removeClass('uk-visible');
+
+    $('.scroll-top-button').addClass('uk-hidden');
+}   
+ }
+
+</script>
+
+</head>
+
+<body>
+
+    <div>
+      <!-- <div id="wrapper"> -->
+      {% include header.html %}
+        <div class="uk-offcanvas-content">
+
+
+      <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
+        <div class="uk-margin-small-left uk-margin-small-right">
+
+        
+          {{ content }}
+
+      </div>
+                 {% include footer.html %}
+
+      
+     </div>
+       <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
+        <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
+            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
+
+        </div>
+</div>
+     </div>
+    </div>
+      {% include third/lean-analytics.html %}
+
+
+ </body>
+ </html>

@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>首页</title>
+
+
+
+  <!-- UIkit CSS -->
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/highlight/styles/tomorrow-night.css">
+
+  <!-- jQuery is required -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit-icons.min.js"></script>
+
+
+  <script src=" /assets/highlight/highlight.pack.js "></script>
+  <script>
+     hljs.initHighlightingOnLoad();
+  </script>
+  <script type="text/javascript" src="/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript">
+
+   window.onload = function()
+   { 
+
+    var winWidth = 0;
+    if (window.innerWidth) {
+      winWidth = window.innerWidth;
+    } else if ((document.body) && (document.body.clientWidth)) {
+      winWidth = document.body.clientWidth;
+    }
+
+  } 
+ window.onscroll =  function()
+ {
+    var winHeight = 0;
+    if (window.innerHeight) {
+      winHeight = window.innerHeight;
+    } else if ((document.body) && (document.body.clientHeight)) {
+      winHeight = document.body.clientHeight;
+    }
+var height = $(document).scrollTop(); 
+
+
+if (height > 10) {
+     $('.scroll-top-button').removeClass('uk-hidden');
+
+    $('.scroll-top-button').addClass('uk-visible');
+} else {
+    $('.scroll-top-button').removeClass('uk-visible');
+
+    $('.scroll-top-button').addClass('uk-hidden');
+}   
+ }
+
+</script>
+
+</head>
+
+<body>
+
+    <div>
+      <!-- <div id="wrapper"> -->
+      
+<div uk-sticky class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed uk-active uk-sticky-below">
+	<div class=" uk-container uk-container-expand  ls-container" >
+		<nav class="uk-navbar ls-navbar  uk-width-1" style="max-width: 640px">
+			<div class="uk-navbar-left">
+				<a class="uknavbar--item uk-logo ls-logo" href="/">大白的日常</a>
+			</div>
+			<div class="uk-navbar-right uk-visible@s">
+				<ul class="uk-navbar-nav">
+					
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/">POST</a></li>
+					
+
+
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/archive">ARCHIVE</a></li>
+					
+
+
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/tags">TAGS</a></li>
+					
+
+
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/links">LINKS</a></li>
+					
+
+
+					
+					
+					
+
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="/about">ABOUT</a></li>
+					
+
+
+					
+					
+				</ul>
+			</div>
+			<div class="uk-navbar-right uk-hidden@s">
+				<a class="uk-navbar-toggle" style="height: 64px" uk-icon="icon: menu"></a>
+				<div uk-dropdown="mode: click;">
+					<ul class="uk-nav  uk-dropdown-nav">
+						
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/">POST</a></li>
+					
+						<!-- <li><a href="/">POST</a></li> -->
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/archive">ARCHIVE</a></li>
+					
+						<!-- <li><a href="/archive">ARCHIVE</a></li> -->
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/tags">TAGS</a></li>
+					
+						<!-- <li><a href="/tags">TAGS</a></li> -->
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/links">LINKS</a></li>
+					
+						<!-- <li><a href="/links">LINKS</a></li> -->
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="/about">ABOUT</a></li>
+					
+						<!-- <li><a href="/about">ABOUT</a></li> -->
+
+						
+						
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+	</div>
+</div>
+
+        <div class="uk-offcanvas-content">
+
+
+      <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
+        <div class="uk-margin-small-left uk-margin-small-right">
+
+        
+          
+<link rel="stylesheet" type="text/css" href="/assets/css/post_list.css">
+<div  class="uk-width-1 uk-child-width-1">
+  <div  class="uk-margin-small-left uk-margin-medium-top uk-margin-auto uk-text-uppercase" style="max-width: 640px; font-size: 3em;" >POST</div>
+  
+  
+  
+  
+  
+
+  <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
+
+    <article class="uk-article" style="margin-top: 0;" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500 repeat: true">
+
+     <!-- post -->
+     
+     <div class="card-type-mark"><i class="fa fa-code" aria-hidden="true"></i></div>
+     
+     <h2 class="uk-text-title uk-margin-small-bottom">
+      
+      <a class="post-title-link uk-link-reset" href="/jekyll/pixyll/2016/07/29/AssetsLibrary-and-PhotosKit.html" itemprop="url">关于AssetsLibrary和PhotosKit</a>
+      
+    </h2>
+    <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">随着iOS不断的升级，苹果逐步放弃了AssetsLibrary，提供了新的框架Photos。
+
+</p>
+
+    
+    
+
+    
+    <div class="uk-margin-small">
+      <div>
+        
+        <a class="post-title-link uk-button uk-button-text" href="/jekyll/pixyll/2016/07/29/AssetsLibrary-and-PhotosKit.html" itemprop="url">Read more</a>
+
+        
+      </div>
+    </div>
+    <div class="uk-article-meta uk-text-small uk-text-uppercase" uk-grid>
+
+      <div class="uk-margin-small-right"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+      2016-07-29
+      
+      <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
+      
+      
+      code
+      
+      
+      
+      
+    </div>
+    
+  </article>
+</div> 
+
+  
+
+  <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
+
+    <article class="uk-article" style="margin-top: 0;" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500 repeat: true">
+
+     <!-- post -->
+     
+     <h2 class="uk-text-title uk-margin-small-bottom">
+      
+      <a class="post-title-link uk-link-reset" href="/2016/07/10/codeigniter-hook.html" itemprop="url">CodeIgniter 钩子</a>
+      
+    </h2>
+    <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">简介
+
+</p>
+
+    
+    
+
+    
+    <div class="uk-margin-small">
+      <div>
+        
+        <a class="post-title-link uk-button uk-button-text" href="/2016/07/10/codeigniter-hook.html" itemprop="url">Read more</a>
+
+        
+      </div>
+    </div>
+    <div class="uk-article-meta uk-text-small uk-text-uppercase" uk-grid>
+
+      <div class="uk-margin-small-right"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+      2016-07-10
+      
+      <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
+      
+      
+      code
+      
+      
+      
+      
+    </div>
+    
+  </article>
+</div> 
+
+  
+
+  <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
+
+    <article class="uk-article" style="margin-top: 0;" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500 repeat: true">
+
+     <!-- post -->
+     
+     <h2 class="uk-text-title uk-margin-small-bottom">
+      
+      <a class="post-title-link uk-link-reset" href="/2016/06/19/remote-host-identification-has-changed.html" itemprop="url">REMOTE HOST IDENTIFICATION HAS CHANGED</a>
+      
+    </h2>
+    <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">$ ssh 45.127.97.64
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+SHA256:9lxVjf0Tk3qXvmW0UQ9E7cSFN0ITpVzH8RZhT1UAR1M...</p>
+
+    
+    <div class="uk-margin-small" style="width: 100%">
+      <img class="ls-card-img" " src="https://ww3.sinaimg.cn/large/906cb9dbgw1fb2xyzt1mij20wk0duwmv.jpg">
+
+    </div>
+    
+    
+
+    
+    <div class="uk-margin-small">
+      <div>
+        
+        <a class="post-title-link uk-button uk-button-text" href="/2016/06/19/remote-host-identification-has-changed.html" itemprop="url">Read more</a>
+
+        
+      </div>
+    </div>
+    <div class="uk-article-meta uk-text-small uk-text-uppercase" uk-grid>
+
+      <div class="uk-margin-small-right"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+      2016-06-19
+      
+      <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
+      
+      
+      code
+      
+      
+      
+      
+    </div>
+    
+  </article>
+</div> 
+
+  
+
+  <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
+
+    <article class="uk-article" style="margin-top: 0;" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500 repeat: true">
+
+     <!-- post -->
+     
+     <div class="card-type-mark"><i class="fa fa-music" aria-hidden="true"></i></div>
+     
+     <h2 class="uk-text-title uk-margin-small-bottom">
+      
+      <a class="post-title-link uk-link-reset" href="/2016/06/16/css3-waterfall-layout.html" itemprop="url">CSS3多列布局实现瀑布流</a>
+      
+    </h2>
+    <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">HTML代码如下：
+
+</p>
+
+    
+    <div class="uk-margin-small" style="width: 100%">
+      <img class="ls-card-img" " src="https://ww1.sinaimg.cn/mw690/906cb9dbgw1fayoq6tylaj20ue0ggn35.jpg">
+
+    </div>
+    
+    
+
+    
+    <div class="uk-margin-small">
+      <div>
+        
+        <a class="post-title-link uk-button uk-button-text" href="/2016/06/16/css3-waterfall-layout.html" itemprop="url">Read more</a>
+
+        
+      </div>
+    </div>
+    <div class="uk-article-meta uk-text-small uk-text-uppercase" uk-grid>
+
+      <div class="uk-margin-small-right"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+      2016-06-16
+      
+      <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
+      
+      
+      code
+      
+      
+      
+      
+    </div>
+    
+  </article>
+</div> 
+
+  
+
+  <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
+
+    <article class="uk-article" style="margin-top: 0;" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500 repeat: true">
+
+     <!-- post -->
+     
+     <div class="card-type-mark"><i class="fa fa-film" aria-hidden="true"></i></div>
+     
+     <h2 class="uk-text-title uk-margin-small-bottom">
+      
+      <a class="post-title-link uk-link-reset" href="/2016/05/30/ajax-cant-access-origin-resource.html" itemprop="url">Ajax 跨域访问</a>
+      
+    </h2>
+    <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">##问题现象
+
+</p>
+
+    
+    
+
+    
+    <div class="uk-margin-small">
+      <div>
+        
+        <a class="post-title-link uk-button uk-button-text" href="/2016/05/30/ajax-cant-access-origin-resource.html" itemprop="url">Read more</a>
+
+        
+      </div>
+    </div>
+    <div class="uk-article-meta uk-text-small uk-text-uppercase" uk-grid>
+
+      <div class="uk-margin-small-right"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+      2016-05-30
+      
+      <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
+      
+      
+      code
+      
+      
+      
+      
+    </div>
+    
+  </article>
+</div> 
+
+  
+
+  <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
+
+    <article class="uk-article" style="margin-top: 0;" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500 repeat: true">
+
+     <!-- post -->
+     
+     <h2 class="uk-text-title uk-margin-small-bottom">
+      
+      <a class="post-title-link uk-link-reset" href="/2016/04/28/iOS-Lightweight-Generice.html" itemprop="url">iOS 泛型（Lightweight Generice）的使用</a>
+      
+    </h2>
+    <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">Lightweight Generics 轻量级泛型，纯编译器的语法支持，不借助任何objc runtime的升级。即，完全向下兼容（兼容更低的iOS版本）。</p>
+
+    
+    
+
+    
+    <div class="uk-margin-small">
+      <div>
+        
+        <a class="post-title-link uk-button uk-button-text" href="/2016/04/28/iOS-Lightweight-Generice.html" itemprop="url">Read more</a>
+
+        
+      </div>
+    </div>
+    <div class="uk-article-meta uk-text-small uk-text-uppercase" uk-grid>
+
+      <div class="uk-margin-small-right"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+      2016-04-28
+      
+      <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
+      
+      
+      iOS
+      
+      Objective-c
+      
+      
+      
+      
+      <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-location-arrow" aria-hidden="true"></i></div>
+      北京 中国
+      
+    </div>
+    
+  </article>
+</div> 
+
+  
+
+  <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
+
+    <article class="uk-article" style="margin-top: 0;" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500 repeat: true">
+
+     <!-- post -->
+     
+     <h2 class="uk-text-title uk-margin-small-bottom">
+      
+      <a class="post-title-link uk-link-reset" href="/2016/04/17/centos-6.4-x32-install-mysql.html" itemprop="url">CentOS 6.4 x32 安装 MySQL</a>
+      
+    </h2>
+    <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">MySQL安装
+
+</p>
+
+    
+    <div class="uk-margin-small" style="width: 100%">
+      <img class="ls-card-img" " src="https://ww4.sinaimg.cn/mw690/906cb9dbgw1fayosx67eoj20we0f4juo.jpg">
+
+    </div>
+    
+    
+
+    
+    <div class="uk-margin-small">
+      <div>
+        
+        <a class="post-title-link uk-button uk-button-text" href="/2016/04/17/centos-6.4-x32-install-mysql.html" itemprop="url">Read more</a>
+
+        
+      </div>
+    </div>
+    <div class="uk-article-meta uk-text-small uk-text-uppercase" uk-grid>
+
+      <div class="uk-margin-small-right"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+      2016-04-17
+      
+      <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
+      
+      
+      code
+      
+      
+      
+      
+    </div>
+    
+  </article>
+</div> 
+
+  
+
+  <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
+
+    <article class="uk-article" style="margin-top: 0;" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500 repeat: true">
+
+     <!-- post -->
+     
+     <h2 class="uk-text-title uk-margin-small-bottom">
+      
+      <a class="post-title-link uk-link-reset" href="/2016/03/22/the-server-quit-without-updating-pid-file.html" itemprop="url">The server quit without updating PID file.</a>
+      
+    </h2>
+    <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">今天在命令行启动MySQL的时候, 报了一个错误, 无法启动. 如下.
+
+</p>
+
+    
+    <div class="uk-margin-small" style="width: 100%">
+      <img class="ls-card-img" " src="https://ww3.sinaimg.cn/mw690/906cb9dbgw1fayouoc4xij21kw0f5jxk.jpg">
+
+    </div>
+    
+    
+
+    
+    <div class="uk-margin-small">
+      <div>
+        
+        <a class="post-title-link uk-button uk-button-text" href="/2016/03/22/the-server-quit-without-updating-pid-file.html" itemprop="url">Read more</a>
+
+        
+      </div>
+    </div>
+    <div class="uk-article-meta uk-text-small uk-text-uppercase" uk-grid>
+
+      <div class="uk-margin-small-right"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+      2016-03-22
+      
+      <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
+      
+      
+      code
+      
+      
+      
+      
+    </div>
+    
+  </article>
+</div> 
+
+  
+
+  <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
+
+    <article class="uk-article" style="margin-top: 0;" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500 repeat: true">
+
+     <!-- post -->
+     
+     <h2 class="uk-text-title uk-margin-small-bottom">
+      
+      <a class="post-title-link uk-link-reset" href="/2015/12/06/memcache-introduce.html" itemprop="url">Memcache简单介绍</a>
+      
+    </h2>
+    <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">最近在学习有关缓存的一些知识，了解到有Memcache和Redis，那我先来介绍一下我目前了解到Memcache吧。有些人可能会在网上看到Memcache和Memcached这两个词，这两个个东西其实不必太在意，只不过Memcache是这个项目的名称，而Memcached是项目的服务端主程序名称。
+
+</p>
+
+    
+    <div class="uk-margin-small" style="width: 100%">
+      <img class="ls-card-img" " src="https://ww4.sinaimg.cn/mw690/906cb9dbgw1fayofw6kcmj20jj099jsj.jpg">
+
+    </div>
+    
+    
+
+    
+    <div class="uk-margin-small">
+      <div>
+        
+        <a class="post-title-link uk-button uk-button-text" href="/2015/12/06/memcache-introduce.html" itemprop="url">Read more</a>
+
+        
+      </div>
+    </div>
+    <div class="uk-article-meta uk-text-small uk-text-uppercase" uk-grid>
+
+      <div class="uk-margin-small-right"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+      2015-12-06
+      
+      <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-tags" aria-hidden="true"></i></div>
+      
+      
+      code
+      
+      
+      
+      
+    </div>
+    
+  </article>
+</div> 
+
+  
+
+  <div class="uk-card uk-card-default uk-card-body post_list_li uk-margin-auto-left uk-margin-auto-right uk-margin-medium-top" style="max-width: 640px" >
+
+    <article class="uk-article" style="margin-top: 0;" uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 500 repeat: true">
+
+     <!-- post -->
+     
+     <h2 class="uk-text-title uk-margin-small-bottom">
+      
+      <a class="post-title-link uk-link-reset" href="/jekyll/theme/2015/11/15/the-murmur-theme.html" itemprop="url">The Murmur Theme</a>
+      
+    </h2>
+    <p class="uk-margin-small-bottom uk-margin-small-top uk-text-small uk-panel uk-panel-box uk-text-break">
+Landing somewhere between a scholarly publication and an adventurers notebook, the Murmur theme presents your words &amp; photographs in a handsome, agreeable manner. It is well behaved on both mobile &amp; desktop and radically minimal in its footprint. Charged and ready for deployment to Github Pages.
+
+</p>
+
+    
+    
+
+    
+    <div class="uk-margin-small">
+      <div>
+        
+        <a class="post-title-link uk-button uk-button-text" href="/jekyll/theme/2015/11/15/the-murmur-theme.html" itemprop="url">Read more</a>
+
+        
+      </div>
+    </div>
+    <div class="uk-article-meta uk-text-small uk-text-uppercase" uk-grid>
+
+      <div class="uk-margin-small-right"><i class="fa fa-calendar" aria-hidden="true"></i></div>
+      2015-11-15
+      
+      
+      <div class="uk-margin-left uk-margin-small-right"><i class="fa fa-location-arrow" aria-hidden="true"></i></div>
+      Florence, Italy
+      
+    </div>
+    
+  </article>
+</div> 
+
+
+<div class="uk-padding-small">
+  <div class="uk-width-1 post_list_paginator_li uk-margin-auto" style="max-width: 640px" >
+   
+<ul class="uk-pagination uk-child-width-1-3 uk-text-small">
+	<li>
+		
+		<a href="/"><span class="uk-margin-small-right" uk-pagination-previous></span> Previous</a>
+		
+	</li>
+	<li class="uk-text-center">Page: 2 of 3</li>
+	<li class="uk-text-right">
+		
+		<a href="/page3">Next <span class="uk-margin-small-left" uk-pagination-next></span></a>
+		
+	</li>
+</ul>
+
+
+<!-- <nav class="paginator paginator-space">
+      <div class="paginator_item">
+        <a href="/"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Previous</a>
+      </div>
+      <div class="paginator_item">
+        Page: 2 of 3
+      </div>
+      <div class="paginator_item">
+        <a href="/page3">Next <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+      </div>
+  </nav> -->
+
+
+
+ </div>
+</div>
+</div>
+
+
+
+
+      </div>
+                 <div class="uk-width-1 uk-text-center uk-padding-small uk-text-small uk-text-left">
+	
+	
+	 &copy; 1970 Later
+	 <p>Powered by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="http://jekyll.com.cn">Jekyll</a> . Theme by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="/"
+	 	>Later</a></p>
+</div>
+
+
+      
+     </div>
+       <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
+        <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
+            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
+
+        </div>
+</div>
+     </div>
+    </div>
+      
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TEv9SLGVuokoA9S9hEJ4YdW3-gzGzoHsz", "FB770fG9JNXEB42O9KEOeFCT");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+
+
+ </body>
+ </html>
