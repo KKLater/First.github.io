@@ -1,9 +1,4 @@
 
-
-
-
-{{ post.url }}
-{{ page.url }}
 <link rel="stylesheet" type="text/css" href="{{ "/assets/css/post.css" | prepend: site.baseurl }}">
 <div  class="uk-width-1 uk-child-width-1 uk-margin-auto uk-grid-medium" style="max-width: 640px" uk-grid>
 
@@ -59,13 +54,13 @@
 		</div>
 	</div>
 	{% if site.leancloud_visitors.enable %}
-             <span id="{{ post.url }}" class="leancloud_visitors" data-flag-title="{{ post.title }}">
+             <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
                </span>
                {% if site.post_meta.item_text %}
-                 <span class="post-meta-item-text">{{__.post.visitors}} </span>
+                 <span class="post-meta-item-text">{{__.page.visitors}} </span>
                  {% else %}
                                   <span class="post-meta-item-text">0 </span>
 
