@@ -27,42 +27,27 @@
 				</div>
 				{{ page.location }}
 				{% endif %}
-				
-     {% if site.leancloud_visitors.enable %}
+				<div>
+					{% if site.leancloud_visitors.enable %}
              <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
                </span>
-               <!-- {% if site.post_meta.item_text %} -->
-                 <span class="post-meta-item-text">{{__.post.visitors}} </span>
-                <!--  {% else %}
-                                  <span class="post-meta-item-text">0 </span>
- -->
-               {% endif %}
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          {% endif %}
-
-
-			{% if site.leancloud_visitors.enable %}
-             <span id="{{ page.url }}" class="leancloud_visitors uk-margin-left uk-margin-top-remove" data-flag-title="{{ page.title }}">
-             	<span class=" uk-margin-small-right ">
-             		  <i class="fa fa-eye"></i>
-
-             	</span>
-             	  {% if __.post.visitors %}
+               {% if site.post_meta.item_text %}
                  <span class="post-meta-item-text">{{__.post.visitors}} </span>
                  {% else %}
                                   <span class="post-meta-item-text">0 </span>
 
                {% endif %}
                  <span class="leancloud-visitors-count"></span>
-
-                </span>
-           
-             
+             </span>
           {% endif %}
+				</div>
+     
+
+
+			
 			</div>
 		</div>
 	</div>
@@ -89,15 +74,6 @@
 			{% include page_footer.html %}
 		</div>
 	</div>
-	{% if site.leancloud_visitors.enable %}
-             <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          {% endif %}
 </div>
 
 {% include third/comments.html %}
