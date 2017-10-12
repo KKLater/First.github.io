@@ -95,12 +95,19 @@ leancloud_visitors:
   app_id: TEv9SLGVuokoA9S9hEJ4YdW3-gzGzoHsz
   app_key: FB770fG9JNXEB42O9KEOeFCT
 
+
+
+
 # wordcount
 post_wordcount:
   item_text: true
   wordcount: true
   min2read: true
   separated_meta: true
+
+
+
+
 
 # youyan
 youyan_uid: 2144594
