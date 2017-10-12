@@ -27,21 +27,16 @@
 				</div>
 				{{ page.location }}
 				{% endif %}
-				<div>
-					{% if site.leancloud_visitors.enable %}
-             <span id="{{ page.url }}" class="leancloud_visitors" data-flag-title="{{ page.title }}">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-              
-                 <span class="leancloud-visitors-count">0</span>
-             </span>
-          {% endif %}
+				{% if site.leancloud_visitors.enable %}
+				<div class=" leancloud_visitors uk-margin-left  uk-margin-top-remove"  data-flag-title="{{ page.title }}">
+					<div class="uk-margin-small-right">
+						<i class="fa fa-eye"></i>
+
+					</div>
+					<div class="leancloud-visitors-count">0</div>
+
 				</div>
-     
-
-
+				{% endif %}
 			
 			</div>
 		</div>
@@ -73,5 +68,5 @@
 
 {% include third/comments.html %}
 
-     
+
 
