@@ -14,12 +14,12 @@
 
 					{% assign npath = page.path | split: '/' | first | split: '.'| first | prepend: "/"  %}
 					{% if path == "/" and npath == "/index" %}
-					<li  style="height: 64px"><a class="nav_item nav_item_select" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px; " href="{{ path }}">{{ name }}</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_select" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px; " href="{{ path |  prepend: site.baseurl }}">{{ name }}</a></li>
 					{% elsif path != "/" and  npath == path %}
-					<li  style="height: 64px"><a class="nav_item nav_item_select" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px; " href="{{ path }}">{{ name }}</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_select" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px; " href="{{ path |  prepend: site.baseurl }}">{{ name }}</a></li>
 
 					{% else %}
-					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="{{ path }}">{{ name }}</a></li>
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="{{ path |  prepend: site.baseurl }}">{{ name }}</a></li>
 					{% endif %}
 
 
@@ -38,12 +38,12 @@
 
 							{% assign npath = page.path | split: '/' | first | split: '.'| first | prepend: "/"  %}
 					{% if path == "/" and npath == "/index" %}
-						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_select" href="{{ path }}">{{ name }}</a></li>
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_select" href="{{ path |  prepend: site.baseurl }}">{{ name }}</a></li>
 					{% elsif path != "/" and  npath == path %}
-						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_select" href="{{ path }}">{{ name }}</a></li>
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_select" href="{{ path |  prepend: site.baseurl }}">{{ name }}</a></li>
 
 					{% else %}
-						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="{{ path }}">{{ name }}</a></li>
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="{{ path |  prepend: site.baseurl }}">{{ name }}</a></li>
 					{% endif %}
 						<!-- <li><a href="{{ path }}">{{ name }}</a></li> -->
 
