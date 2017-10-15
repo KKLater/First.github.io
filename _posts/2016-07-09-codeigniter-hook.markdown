@@ -6,6 +6,8 @@ card-image:
 date:       	2016-07-09 23:00:00
 tag:       	code
 post-card-type: article
+categories: jekyll pixyll
+
 ---
 
 ## 简介

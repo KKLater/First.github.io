@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>首页</title>
+
+  <link rel="stylesheet" type="text/css" href="/assets/uikit/css/uikit.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/theme.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/navigation.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/paginator.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/highlight/styles/tomorrow-night.css">
+
+  <!-- jQuery is required -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit-icons.min.js"></script>
+
+
+  <script src=" /assets/highlight/highlight.pack.js "></script>
+
+  <script>
+     hljs.initHighlightingOnLoad();
+  </script>
+  <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+
+  <script type="text/javascript">
+
+   window.onload = function()
+   { 
+
+    var winWidth = 0;
+    if (window.innerWidth) {
+      winWidth = window.innerWidth;
+    } else if ((document.body) && (document.body.clientWidth)) {
+      winWidth = document.body.clientWidth;
+    }
+
+  } 
+  window.onscroll =  function()
+  {
+    var winHeight = 0;
+    if (window.innerHeight) {
+      winHeight = window.innerHeight;
+    } else if ((document.body) && (document.body.clientHeight)) {
+      winHeight = document.body.clientHeight;
+    }
+    var height = $(document).scrollTop(); 
+
+
+    if (height > 10) {
+     $('.scroll-top-button').removeClass('uk-hidden');
+
+     $('.scroll-top-button').addClass('uk-visible');
+   } else {
+    $('.scroll-top-button').removeClass('uk-visible');
+
+    $('.scroll-top-button').addClass('uk-hidden');
+  }   
+}
+</script>
+</head>
+<body>
+  <div>
+      
+<div uk-sticky class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed uk-active uk-sticky-below">
+	<div class=" uk-container uk-container-expand  ls-container" >
+		<nav class="uk-navbar ls-navbar  uk-width-1" style="max-width: 640px">
+			<div class="uk-navbar-left">
+				<a class="uknavbar--item uk-logo ls-logo" href="/">大白的日常</a>
+			</div>
+			<div class="uk-navbar-right uk-visible@s">
+				<ul class="uk-navbar-nav">
+					
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/">POST</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/categories">CATEGORIES</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/tags">TAGS</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/archive">ARCHIVE</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/links">LINKS</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/about">ABOUT</a></li>
+					
+
+
+					
+					
+
+				</ul>
+			</div>
+			<div class="uk-navbar-right uk-hidden@s">
+				<a class="uk-navbar-toggle" style="height: 64px" uk-icon="icon: menu"></a>
+				<div uk-dropdown="mode: click;">
+					<ul class="uk-nav  uk-dropdown-nav">
+						
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/">POST</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/categories">CATEGORIES</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/tags">TAGS</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/archive">ARCHIVE</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/links">LINKS</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/about">ABOUT</a></li>
+					
+
+						
+						
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+	</div>
+</div>
+
+      <div class="uk-offcanvas-content">
+
+
+        <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
+          <div class="uk-margin-small-left uk-margin-small-right">            
+            
+<link rel="stylesheet" type="text/css" href="/assets/css/post.css">
+<div  class="uk-width-1 uk-child-width-1 uk-margin-auto uk-grid-medium" style="max-width: 640px" uk-grid>
+	
+		
+		
+			<ul class="uk-breadcrumb uk-margin-medium-top"  style="border-left: 3px solid #1AB3F2">
+				<li><a class="uk-margin-small-left" href="http://localhost:4000/category_page/#/">jekyll</a></li>
+				
+				<li><a href="http://localhost:4000/category_page/#/pixyll">pixyll</a></li>
+				
+			</ul>
+
+		
+	<div class="uk-width-4-5 uk-margin-small-top">
+	
+		<div class="uk-margin-small-left   uk-text-large  uk-margin-auto uk-text-uppercase" style="max-width: 640px; font-size: 3em;" >关于AssetsLibrary和PhotosKit</div>
+
+		<div class=" uk-text-uppercase uk-margin-small-top uk-text-muted" >
+			<div uk-grid>
+				<div class="uk-flex">
+					<div class="uk-margin-small-right">
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+					</div>
+					2016-07-29
+				</div>
+
+			
+
+				
+				<div class="uk-flex  uk-margin-remove-top">
+					<div class="uk-margin-small-right uk-padding-remove-left">
+						<i class="fa fa-tags" aria-hidden="true"></i>
+					</div>
+					
+					code
+					
+				</div>
+				
+
+				
+
+				<div class="uk-flex  uk-margin-remove-top">
+					<div class="uk-margin-remove-top uk-padding-remove-left">
+						
+
+						<span id="/jekyll/pixyll/2016/07/29/AssetsLibrary-and-PhotosKit/" class="leancloud_visitors uk-margin-top-remove" data-flag-title="关于AssetsLibrary和PhotosKit">
+							<span class="post-meta-item-icon uk-margin-small-right">
+								<i class="fa fa-eye"></i>
+							</span>
+
+							<span class="leancloud-visitors-count">0</span>
+						</span>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="uk-width-1-5">
+		<div class="uk-width-auto uk-text-large uk-text-muted" style="font-size: 3em">
+			
+			<i class="fa fa-code" aria-hidden="true"></i>
+			
+		</div>
+	</div>
+		<article class="uk-card uk-card-default uk-card-body">
+		<p>随着iOS不断的升级，苹果逐步放弃了AssetsLibrary，提供了新的框架Photos。</p>
+
+<p>以下是<code class="highlighter-rouge">AssetsLibrary</code>与<code class="highlighter-rouge">Photos</code>的对比：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>AssetsLibrary</th>
+      <th>PhotosKit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>资源库</td>
+      <td>AssetsLibrary</td>
+      <td>PHPhotoLibrary</td>
+    </tr>
+    <tr>
+      <td>相册</td>
+      <td>ALAssetsGroup</td>
+      <td>PHAssetCollection</td>
+    </tr>
+    <tr>
+      <td>照片或视频</td>
+      <td>ALAsset</td>
+      <td>PHAsset</td>
+    </tr>
+    <tr>
+      <td>过滤</td>
+      <td>ALAssetsFilter</td>
+      <td>PHFetchOptions</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="1组织结构对比">1、组织结构对比</h2>
+
+<h5 id="assetslibrary组织结构">AssetsLibrary组织结构</h5>
+
+<ul>
+  <li>
+    <p>AssetsLibrary: 代表整个设备中的资源库（照片库），通过 AssetsLibrary 可以获取和包括设备中的照片和视频</p>
+  </li>
+  <li>
+    <p>ALAssetsGroup: 映射照片库中的一个相册，通过 ALAssetsGroup 可以获取某个相册的信息，相册下的资源，同时也可以对某个相册添加资源。</p>
+  </li>
+  <li>
+    <p>ALAsset: 映射照片库中的一个照片或视频，通过 ALAsset 可以获取某个照片或视频的详细信息，或者保存照片和视频。</p>
+  </li>
+  <li>ALAssetRepresentation: ALAssetRepresentation 是对 ALAsset 的封装（但不是其子类），可以更方便地获取 ALAsset 中的资源信息，每个 ALAsset 都有至少有一个 ALAssetRepresentation 对象，可以通过 defaultRepresentation 获取。而例如使用系统相机应用拍摄的 RAW + JPEG 照片，则会有两个 ALAssetRepresentation，一个封装了照片的 RAW 信息，另一个则封装了照片的 JPEG 信息。</li>
+  <li>ALAssetsFilter：照片的过滤器</li>
+</ul>
+
+<h5 id="photokit组织结构">PhotoKit组织结构</h5>
+
+<p><img src="/Users/Later/Desktop/PhotoKit.png" alt="PhotoKit" /></p>
+
+<ul>
+  <li>PHPhotoLibrary：资源库</li>
+  <li>PHAssetCollection：PHCollection 的子类，表示一个相册或者一个时刻，或者是一个「智能相册（系统提供的特定的一系列相册，例如：最近删除，视频列表，收藏等等，如下图所示）</li>
+  <li>PHAsset: 代表照片库中的一个资源，跟 ALAsset 类似，通过 PHAsset 可以获取和保存资源</li>
+  <li>PHFetchOptions：过滤，取资源时设置，过滤相册资源</li>
+</ul>
+
+<h2 id="2资源获取">2、资源获取</h2>
+
+<h3 id="21获取资源权限">2.1、获取资源权限</h3>
+
+<p>AssetsLibrary获取资源权限：</p>
+
+<div class="language-objc highlighter-rouge"><pre class="highlight"><code><span class="n">aa</span>
+<span class="n">NSString</span> <span class="o">*</span><span class="n">tipTextWhenNoPhotosAuthorization</span><span class="p">;</span> <span class="c1">// 提示语
+// 获取当前应用对照片的访问授权状态
+</span><span class="n">ALAuthorizationStatus</span> <span class="n">authorizationStatus</span> <span class="o">=</span> <span class="p">[</span><span class="n">ALAssetsLibrary</span> <span class="nf">authorizationStatus</span><span class="p">];</span>
+<span class="c1">// 如果没有获取访问授权，或者访问授权状态已经被明确禁止，则显示提示语，引导用户开启授权
+</span><span class="k">if</span> <span class="p">(</span><span class="n">authorizationStatus</span> <span class="o">==</span> <span class="n">ALAuthorizationStatusRestricted</span> <span class="o">||</span> <span class="n">authorizationStatus</span> <span class="o">==</span> <span class="n">ALAuthorizationStatusDenied</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">mainInfoDictionary</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSBundle</span> <span class="nf">mainBundle</span><span class="p">]</span> <span class="nf">infoDictionary</span><span class="p">];</span>
+    <span class="n">NSString</span> <span class="o">*</span><span class="n">appName</span> <span class="o">=</span> <span class="p">[</span><span class="n">mainInfoDictionary</span> <span class="nf">objectForKey</span><span class="p">:</span><span class="s">@"CFBundleDisplayName"</span><span class="p">];</span>
+    <span class="n">tipTextWhenNoPhotosAuthorization</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSString</span> <span class="nf">stringWithFormat</span><span class="p">:</span><span class="s">@"请在设备的</span><span class="se">\"</span><span class="s">设置-隐私-照片</span><span class="se">\"</span><span class="s">选项中，允许%@访问你的手机相册"</span><span class="p">,</span> <span class="n">appName</span><span class="p">];</span>
+    <span class="c1">// 展示提示语
+</span><span class="p">}</span>
+</code></pre>
+</div>
+
+<p>PhotosKit获取资源权限：</p>
+
+<div class="language-objc highlighter-rouge"><pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">fbt_libraryAuthorizationCompleted</span><span class="p">:(</span><span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">BOOL</span><span class="p">))</span><span class="nv">completed</span> <span class="p">{</span>
+    <span class="n">PHAuthorizationStatus</span> <span class="n">status</span> <span class="o">=</span> <span class="p">[</span><span class="n">PHPhotoLibrary</span> <span class="nf">authorizationStatus</span><span class="p">];</span>
+  	<span class="c1">//直接询问用户使用权限状态
+</span>    <span class="k">switch</span> <span class="p">(</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">PHAuthorizationStatusNotDetermined</span><span class="p">:</span> <span class="p">{</span>	<span class="c1">//没有设置过，则直接询问设置
+</span>            <span class="p">[</span><span class="n">PHPhotoLibrary</span> <span class="nf">requestAuthorization</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">PHAuthorizationStatus</span> <span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">switch</span> <span class="p">(</span><span class="n">status</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="k">case</span> <span class="n">PHAuthorizationStatusAuthorized</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="o">!</span><span class="n">completed</span> <span class="p">?:</span> <span class="n">completed</span><span class="p">(</span><span class="nb">YES</span><span class="p">);</span>
+                            <span class="k">break</span><span class="p">;</span>
+                        <span class="p">}</span>
+                        <span class="nl">default:</span> <span class="p">{</span>
+                            <span class="o">!</span><span class="n">completed</span> <span class="p">?:</span> <span class="n">completed</span><span class="p">(</span><span class="nb">NO</span><span class="p">);</span>
+                            <span class="k">break</span><span class="p">;</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+            <span class="p">}];</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">case</span> <span class="n">PHAuthorizationStatusRestricted</span><span class="p">:</span>
+        <span class="k">case</span> <span class="n">PHAuthorizationStatusDenied</span><span class="p">:</span> <span class="p">{</span>
+          <span class="c1">//拒绝或限制了权限
+</span>            <span class="o">!</span><span class="n">completed</span> <span class="p">?:</span> <span class="n">completed</span><span class="p">(</span><span class="nb">NO</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">case</span> <span class="n">PHAuthorizationStatusAuthorized</span><span class="p">:</span>
+      	<span class="c1">//准许使用权限
+</span>        <span class="nl">default:</span> <span class="p">{</span>
+            <span class="o">!</span><span class="n">completed</span> <span class="p">?:</span> <span class="n">completed</span><span class="p">(</span><span class="nb">YES</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">//获取使用权限状态后，如果当前为拒绝或者限制权限，则可以通过以下方式直接引导用户跳转到设置项，配置用户权限
+</span><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">openSetting</span> <span class="p">{</span>
+    <span class="n">UIAlertController</span> <span class="o">*</span><span class="n">alert</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIAlertController</span> <span class="nf">alertControllerWithTitle</span><span class="p">:</span><span class="nb">nil</span> <span class="nf">message</span><span class="p">:</span><span class="s">@"此应用没有权限访问您的相册或视频，打开“隐私设置”获取访问权限？"</span> <span class="n">preferredStyle</span><span class="o">:</span><span class="n">UIAlertControllerStyleAlert</span><span class="p">];</span>
+    <span class="n">UIAlertAction</span> <span class="o">*</span><span class="n">sureAction</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIAlertAction</span> <span class="nf">actionWithTitle</span><span class="p">:</span><span class="s">@"确定"</span> <span class="nf">style</span><span class="p">:</span><span class="n">UIAlertActionStyleDestructive</span> <span class="n">handler</span><span class="o">:^</span><span class="p">(</span><span class="n">UIAlertAction</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">action</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">//“设置”URL
+</span>        <span class="n">NSURL</span> <span class="o">*</span><span class="n">url</span> <span class="o">=</span> <span class="p">[</span><span class="n">NSURL</span> <span class="nf">URLWithString</span><span class="p">:</span><span class="n">UIApplicationOpenSettingsURLString</span><span class="p">];</span>
+        <span class="k">if</span> <span class="p">([[</span><span class="n">UIApplication</span> <span class="nf">sharedApplication</span><span class="p">]</span> <span class="nf">canOpenURL</span><span class="p">:</span><span class="n">url</span><span class="p">])</span> <span class="p">{</span>
+            <span class="p">[[</span><span class="n">UIApplication</span> <span class="nf">sharedApplication</span><span class="p">]</span> <span class="nf">openURL</span><span class="p">:</span><span class="n">url</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}];</span>
+    <span class="n">UIAlertAction</span> <span class="o">*</span><span class="n">cancelAction</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIAlertAction</span> <span class="nf">actionWithTitle</span><span class="p">:</span><span class="s">@"取消"</span> <span class="nf">style</span><span class="p">:</span><span class="n">UIAlertActionStyleCancel</span> <span class="n">handler</span><span class="o">:^</span><span class="p">(</span><span class="n">UIAlertAction</span> <span class="o">*</span> <span class="n">_Nonnull</span> <span class="n">action</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">[</span><span class="n">self</span> <span class="nf">dismissViewControllerAnimated</span><span class="p">:</span><span class="nb">YES</span> <span class="nf">completion</span><span class="p">:</span><span class="nb">nil</span><span class="p">];</span>
+    <span class="p">}];</span>
+    <span class="p">[</span><span class="n">alert</span> <span class="nf">addAction</span><span class="p">:</span><span class="n">cancelAction</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">alert</span> <span class="nf">addAction</span><span class="p">:</span><span class="n">sureAction</span><span class="p">];</span>
+    <span class="p">[</span><span class="n">self</span> <span class="nf">presentViewController</span><span class="p">:</span><span class="n">alert</span> <span class="nf">animated</span><span class="p">:</span><span class="nb">YES</span> <span class="n">completion</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="22获取相册资源">2.2获取相册资源</h3>
+
+<p>AssetsLibrary获取相册资源：</p>
+
+<div class="language-objc highlighter-rouge"><pre class="highlight"><code><span class="n">_assetsLibrary</span> <span class="o">=</span> <span class="p">[[</span><span class="n">ALAssetsLibrary</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
+<span class="n">_albumsArray</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSMutableArray</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
+<span class="p">[</span><span class="n">_assetsLibrary</span> <span class="nf">enumerateGroupsWithTypes</span><span class="p">:</span><span class="n">ALAssetsGroupAll</span> <span class="nf">usingBlock</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">ALAssetsGroup</span> <span class="o">*</span><span class="n">group</span><span class="p">,</span> <span class="n">BOOL</span> <span class="o">*</span><span class="n">stop</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">group</span><span class="p">)</span> <span class="p">{</span>
+      	<span class="c1">//设置过滤
+</span>        <span class="p">[</span><span class="n">group</span> <span class="nf">setAssetsFilter</span><span class="p">:[</span><span class="n">ALAssetsFilter</span> <span class="nf">allPhotos</span><span class="p">]];</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">group</span><span class="p">.</span><span class="n">numberOfAssets</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// 把相册储存到数组中，方便后面展示相册时使用
+</span>            <span class="p">[</span><span class="n">_albumsArray</span> <span class="nf">addObject</span><span class="p">:</span><span class="n">group</span><span class="p">];</span>
+        <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">([</span><span class="n">_albumsArray</span> <span class="nf">count</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// 把所有的相册储存完毕，可以展示相册列表
+</span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="c1">// 没有任何有资源的相册，输出提示
+</span>        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span> <span class="n">failureBlock</span><span class="o">:^</span><span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"Asset group not found!</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}];</span>
+</code></pre>
+</div>
+
+<p>AssetsLibraby 通过</p>
+
+<div class="language-objc highlighter-rouge"><pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">enumerateGroupsWithTypes</span><span class="p">:(</span><span class="n">ALAssetsGroupType</span><span class="p">)</span><span class="nv">types</span> <span class="nf">usingBlock</span><span class="p">:(</span><span class="n">ALAssetsLibraryGroupsEnumerationResultsBlock</span><span class="p">)</span><span class="nv">enumerationBlock</span> <span class="nf">failureBlock</span><span class="p">:(</span><span class="n">ALAssetsLibraryAccessFailureBlock</span><span class="p">)</span><span class="nv">failureBlock</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>方法获取所有相册对象ALAssetsGroup。ALAssetsGroup相册对象可通过<code class="highlighter-rouge">- (void)setAssetsFilter:(ALAssetsFilter *)filter;</code>方法设置过滤。亦可通过<code class="highlighter-rouge">- (NSInteger)numberOfAssets;</code>方法获取当前相册的资源个数。</p>
+
+<p>PhotoKit获取相册资源就没有这么直接了，其过滤原则也是灵活的多。以获取照片“相机胶卷”相册为例：</p>
+
+<div class="language-objc highlighter-rouge"><pre class="highlight"><code><span class="c1">//获取相机胶卷
+</span><span class="n">PHFetchResult</span>  <span class="o">*</span><span class="n">cameraFetch</span> <span class="o">=</span> <span class="p">[</span><span class="n">PHAssetCollection</span> <span class="nf">fetchAssetCollectionsWithType</span><span class="p">:</span><span class="n">PHAssetCollectionTypeSmartAlbum</span> <span class="nf">subtype</span><span class="p">:</span><span class="n">PHAssetCollectionSubtypeSmartAlbumUserLibrary</span> <span class="n">options</span><span class="o">:</span><span class="nb">nil</span><span class="p">];</span>
+<span class="n">PHAssetCollection</span> <span class="o">*</span><span class="n">assetCollection</span>  <span class="o">=</span> <span class="p">[</span><span class="n">cameraFetch</span> <span class="nf">lastObject</span><span class="p">];</span>
+</code></pre>
+</div>
+
+<p>PhotosKit通过<code class="highlighter-rouge">+ (PHFetchResult&lt;PHAssetCollection *&gt; *)fetchAssetCollectionsWithType:(PHAssetCollectionType)type subtype:(PHAssetCollectionSubtype)subtype options:(nullable PHFetchOptions *)options;</code>方法获取所有符合过滤的相册资源，其中，<code class="highlighter-rouge">PHAssetCollectionType</code>表示相册资源的类型，<code class="highlighter-rouge">PHAssetCollectionSubtype</code>表示各类型下的子类。其分别如下：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>PHAssetCollectionType</th>
+      <th>PHAssetCollectionSubtype</th>
+      <th>中文释义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>PHAssetCollectionTypeAlbum</td>
+      <td>PHAssetCollectionSubtypeAlbumRegular</td>
+      <td>定期</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeAlbumSyncedEvent</td>
+      <td>同步时刻</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeAlbumSyncedFaces</td>
+      <td>同步人脸识别</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeAlbumSyncedAlbum</td>
+      <td>同步相册</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeAlbumImported</td>
+      <td>重要</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeAlbumMyPhotoStream</td>
+      <td>我的相册组</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeAlbumCloudShared</td>
+      <td>云共享</td>
+    </tr>
+    <tr>
+      <td>PHAssetCollectionTypeSmartAlbum</td>
+      <td>PHAssetCollectionSubtypeSmartAlbumGeneric</td>
+      <td>普通</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeSmartAlbumPanoramas</td>
+      <td>全景</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeSmartAlbumVideos</td>
+      <td>视频</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeSmartAlbumFavorites</td>
+      <td>最喜欢</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeSmartAlbumTimelapses</td>
+      <td>时间轴</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeSmartAlbumAllHidden</td>
+      <td>隐藏</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeSmartAlbumRecentlyAdded</td>
+      <td>新添加</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeSmartAlbumBursts</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeSmartAlbumSlomoVideos</td>
+      <td>延时摄影</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeSmartAlbumUserLibrary</td>
+      <td>用户相册</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeSmartAlbumSelfPortraits</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>PHAssetCollectionSubtypeSmartAlbumScreenshots</td>
+      <td>截屏</td>
+    </tr>
+    <tr>
+      <td>不关心子类型的可以使用</td>
+      <td>PHAssetCollectionSubtypeAny</td>
+      <td>任意</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>除此之外，亦可以通过设置PHFetchOptions，来做更详细的过滤。</p>
+
+<h3 id="23获取照片资源">2.3、获取照片资源</h3>
+
+<p>AssetLibrary获取照片资源</p>
+
+<div class="language-objc highlighter-rouge"><pre class="highlight"><code><span class="n">_imagesAssetArray</span> <span class="o">=</span> <span class="p">[[</span><span class="n">NSMutableArray</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
+<span class="p">[</span><span class="n">assetsGroup</span> <span class="nf">enumerateAssetsWithOptions</span><span class="p">:</span><span class="n">NSEnumerationReverse</span> <span class="nf">usingBlock</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="n">ALAsset</span> <span class="o">*</span><span class="n">result</span><span class="p">,</span> <span class="n">NSUInteger</span> <span class="n">index</span><span class="p">,</span> <span class="n">BOOL</span> <span class="o">*</span><span class="n">stop</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">[</span><span class="n">_imagesAssetArray</span> <span class="nf">addObject</span><span class="p">:</span><span class="n">result</span><span class="p">];</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="c1">// result 为 nil，即遍历相片或视频完毕，可以展示资源列表
+</span>    <span class="p">}</span>
+<span class="p">}];</span>
+</code></pre>
+</div>
+
+<p>获取照片资源详细信息</p>
+
+<div class="language-objc highlighter-rouge"><pre class="highlight"><code><span class="c1">// 获取资源图片的详细资源信息，其中 imageAsset 是某个资源的 ALAsset 对象
+</span><span class="n">ALAssetRepresentation</span> <span class="o">*</span><span class="n">representation</span> <span class="o">=</span> <span class="p">[</span><span class="n">imageAsset</span> <span class="nf">defaultRepresentation</span><span class="p">];</span>
+<span class="c1">// 获取资源图片的 fullScreenImage
+</span><span class="n">UIImage</span> <span class="o">*</span><span class="n">contentImage</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIImage</span> <span class="nf">imageWithCGImage</span><span class="p">:[</span><span class="n">representation</span> <span class="nf">fullScreenImage</span><span class="p">]];</span>
+</code></pre>
+</div>
+
+<p>PhotosKit获取照片资源：</p>
+
+<div class="language-objc highlighter-rouge"><pre class="highlight"><code><span class="c1">//options：用于对照片的过滤，设置type、排序等
+</span><span class="n">PHFetchResult</span> <span class="o">*</span><span class="n">fetchR</span>    <span class="o">=</span> <span class="p">[</span><span class="n">PHAsset</span> <span class="nf">fetchAssetsInAssetCollection</span><span class="p">:</span><span class="n">assetCollection</span> <span class="nf">options</span><span class="p">:[</span><span class="n">self</span> <span class="nf">_fbt_options</span><span class="p">]];</span>
+<span class="c1">//fetchR对象内则为PHAsset对象
+//根据PHAsset获取具体的资源图片，需使用到PHImageManager类的实例方法
+</span><span class="k">-</span> <span class="p">(</span><span class="n">PHImageRequestID</span><span class="p">)</span><span class="nf">requestImageForAsset</span><span class="p">:(</span><span class="n">PHAsset</span> <span class="o">*</span><span class="p">)</span><span class="nv">asset</span> <span class="nf">targetSize</span><span class="p">:(</span><span class="n">CGSize</span><span class="p">)</span><span class="nv">targetSize</span> <span class="nf">contentMode</span><span class="p">:(</span><span class="n">PHImageContentMode</span><span class="p">)</span><span class="nv">contentMode</span> <span class="nf">options</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">PHImageRequestOptions</span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span> <span class="nf">resultHandler</span><span class="p">:(</span><span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">UIImage</span> <span class="o">*</span><span class="n">__nullable</span> <span class="n">result</span><span class="p">,</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="n">__nullable</span> <span class="n">info</span><span class="p">))</span><span class="nv">resultHandler</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p>注：PhotoKit的获取照片，使用<code class="highlighter-rouge">PHImageManager</code>的子类<code class="highlighter-rouge">PHImageCachingManager</code>优化，<code class="highlighter-rouge">PHImageCachingManagery</code>用于图像处理过程的缓存，例如在collectionView上加载图片，可以使用其提前缓存要展示的图片，增加流畅性。</p>
+
+<ol>
+  <li>压缩！</li>
+</ol>
+
+		<hr>
+		
+<ul class="uk-pagination uk-child-width-1-2 uk-text-small">
+    <li>
+        
+
+        
+
+        <a href="/jekyll/pixyll/2016/08/28/async-open-new-tab-in-brower/"><span class="uk-margin-small-right" uk-pagination-previous></span> 浏览器中异步打开新标签页</a>
+
+        
+        
+
+    </li>
+
+    <li class="uk-text-right">
+
+        
+        
+
+        <a href="/jekyll/pixyll/2016/07/10/codeigniter-hook/">CodeIgniter 钩子 <span class="uk-margin-small-left" uk-pagination-next></span></a>
+
+        
+        
+
+    </li>
+</ul>
+	</article>
+	
+	
+	
+	<div class="uk-card uk-card-default uk-card-body ">
+		<h2 class="uk-margin-small-top">相关文章：</h2>
+
+		
+
+
+		
+		
+		
+
+		<div class="uk-margin-top-remove uk-margin-small-bottom uk-margin-small-left">
+			<i class="fa fa-pagelines" aria-hidden="true" style="margin-right: 10px"></i><a class="uk-button uk-button-text " href="http://localhost:4000/jekyll/update/2017/09/18/welcome-to-jekyll/">Welcome to Jekyll!</a>
+		</div>
+		
+
+		<div class="uk-margin-top-remove uk-margin-small-bottom uk-margin-small-left">
+			<i class="fa fa-pagelines" aria-hidden="true" style="margin-right: 10px"></i><a class="uk-button uk-button-text " href="http://localhost:4000/jekyll/pixyll/2016/08/28/async-open-new-tab-in-brower/">浏览器中异步打开新标签页</a>
+		</div>
+		
+
+		<div class="uk-margin-top-remove uk-margin-small-bottom uk-margin-small-left">
+			<i class="fa fa-pagelines" aria-hidden="true" style="margin-right: 10px"></i><a class="uk-button uk-button-text " href="http://localhost:4000/jekyll/pixyll/2016/07/29/AssetsLibrary-and-PhotosKit/">关于AssetsLibrary和PhotosKit</a>
+		</div>
+		
+
+		<div class="uk-margin-top-remove uk-margin-small-bottom uk-margin-small-left">
+			<i class="fa fa-pagelines" aria-hidden="true" style="margin-right: 10px"></i><a class="uk-button uk-button-text " href="http://localhost:4000/jekyll/pixyll/2016/07/10/codeigniter-hook/">CodeIgniter 钩子</a>
+		</div>
+		
+
+		<div class="uk-margin-top-remove uk-margin-small-bottom uk-margin-small-left">
+			<i class="fa fa-pagelines" aria-hidden="true" style="margin-right: 10px"></i><a class="uk-button uk-button-text " href="http://localhost:4000/jekyll/pixyll/2016/06/19/remote-host-identification-has-changed/">REMOTE HOST IDENTIFICATION HAS CHANGED</a>
+		</div>
+		
+		
+		
+
+
+		
+		
+
+
+		
+		
+
+
+		
+		
+
+
+		
+		
+	</div>
+	
+	<div class="uk-card uk-card-default uk-card-body">
+		<div>
+			<div class="uk-margin-remove-left uk-margin-small-top" uk-grid>
+
+				<div class="uk-width-1-5 uk-padding-remove-left uk-margin-auto-top uk-margin-auto-bottom uk-margin-auto">
+					<img class="uk-border-circle" src="http://localhost:4000/assets/avatar.jpeg" alt="Border circle">
+				</div>
+				<div class="uk-width-4-5 uk-margin-auto-top uk-margin-auto-bottom">
+					<h2 class="uk-margin-remove-top">Later</h2>
+					<p>一个写代码的。能简单写点Objective-C、swift、html、css、js。没事还设计点UI，会用点Sketch。</p>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+	<div class="uk-card uk-card-default uk-card-body">
+		  <div class="comments" id="comments">
+  	
+ 
+  </div>
+
+  
+  
+<div id="container"></div>
+
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+	var gitment = new Gitment({
+		owner: 'lshxin89@126.com',
+		repo: 'blog.comments',
+		oauth: {
+			client_id: 'e192fca0611030509c7f',
+			client_secret: '9e0c77c8864e46db31d27f0ad08ad787cd221916',
+		},
+	})
+	gitment.render('container')
+</script>
+
+  
+	</div>
+</div>
+
+
+
+
+
+          </div>
+          <div class="uk-width-1 uk-text-center uk-padding-small uk-text-small uk-text-left">
+	
+	
+	 &copy; 1970 Later
+	 <p>Powered by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="http://jekyll.com.cn">Jekyll</a> . Theme by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="/"
+	 	>Later</a></p>
+</div>
+
+        </div>
+        <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
+          <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
+            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TEv9SLGVuokoA9S9hEJ4YdW3-gzGzoHsz", "FB770fG9JNXEB42O9KEOeFCT");</script>
+  <script>
+    function showTime(Counter) {
+
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  </body>
+  </html>
+

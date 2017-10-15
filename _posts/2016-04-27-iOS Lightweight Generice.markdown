@@ -9,6 +9,8 @@ tag:
     - iOS
     - Objective-c
 excerpt:  Lightweight Generics 轻量级泛型，纯编译器的语法支持，不借助任何objc runtime的升级。即，完全向下兼容（兼容更低的iOS版本）。
+about: map
+
 ---
 ---
 `Lightweight Generics` 轻量级泛型，纯编译器的语法支持，不借助任何objc runtime的升级。即，完全向下兼容（兼容更低的iOS版本）。

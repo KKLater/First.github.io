@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>首页</title>
+
+  <link rel="stylesheet" type="text/css" href="/assets/uikit/css/uikit.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/theme.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/navigation.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/paginator.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/highlight/styles/tomorrow-night.css">
+
+  <!-- jQuery is required -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit-icons.min.js"></script>
+
+
+  <script src=" /assets/highlight/highlight.pack.js "></script>
+
+  <script>
+     hljs.initHighlightingOnLoad();
+  </script>
+  <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+
+  <script type="text/javascript">
+
+   window.onload = function()
+   { 
+
+    var winWidth = 0;
+    if (window.innerWidth) {
+      winWidth = window.innerWidth;
+    } else if ((document.body) && (document.body.clientWidth)) {
+      winWidth = document.body.clientWidth;
+    }
+
+  } 
+  window.onscroll =  function()
+  {
+    var winHeight = 0;
+    if (window.innerHeight) {
+      winHeight = window.innerHeight;
+    } else if ((document.body) && (document.body.clientHeight)) {
+      winHeight = document.body.clientHeight;
+    }
+    var height = $(document).scrollTop(); 
+
+
+    if (height > 10) {
+     $('.scroll-top-button').removeClass('uk-hidden');
+
+     $('.scroll-top-button').addClass('uk-visible');
+   } else {
+    $('.scroll-top-button').removeClass('uk-visible');
+
+    $('.scroll-top-button').addClass('uk-hidden');
+  }   
+}
+</script>
+</head>
+<body>
+  <div>
+      
+<div uk-sticky class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed uk-active uk-sticky-below">
+	<div class=" uk-container uk-container-expand  ls-container" >
+		<nav class="uk-navbar ls-navbar  uk-width-1" style="max-width: 640px">
+			<div class="uk-navbar-left">
+				<a class="uknavbar--item uk-logo ls-logo" href="/">大白的日常</a>
+			</div>
+			<div class="uk-navbar-right uk-visible@s">
+				<ul class="uk-navbar-nav">
+					
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/">POST</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/categories">CATEGORIES</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/tags">TAGS</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/archive">ARCHIVE</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/links">LINKS</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/about">ABOUT</a></li>
+					
+
+
+					
+					
+
+				</ul>
+			</div>
+			<div class="uk-navbar-right uk-hidden@s">
+				<a class="uk-navbar-toggle" style="height: 64px" uk-icon="icon: menu"></a>
+				<div uk-dropdown="mode: click;">
+					<ul class="uk-nav  uk-dropdown-nav">
+						
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/">POST</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/categories">CATEGORIES</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/tags">TAGS</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/archive">ARCHIVE</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/links">LINKS</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/about">ABOUT</a></li>
+					
+
+						
+						
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+	</div>
+</div>
+
+      <div class="uk-offcanvas-content">
+
+
+        <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
+          <div class="uk-margin-small-left uk-margin-small-right">            
+            
+<link rel="stylesheet" type="text/css" href="/assets/css/post.css">
+<div  class="uk-width-1 uk-child-width-1 uk-margin-auto uk-grid-medium" style="max-width: 640px" uk-grid>
+	
+		
+		
+			<ul class="uk-breadcrumb uk-margin-medium-top"  style="border-left: 3px solid #1AB3F2">
+				<li><a class="uk-margin-small-left" href="http://localhost:4000/category_page/#/"></a></li>
+				
+			</ul>
+
+		
+	<div class="uk-width-4-5 uk-margin-small-top">
+	
+		<div class="uk-margin-small-left   uk-text-large  uk-margin-auto uk-text-uppercase" style="max-width: 640px; font-size: 3em;" >CentOS 6.4 x32 安装 MySQL</div>
+
+		<div class=" uk-text-uppercase uk-margin-small-top uk-text-muted" >
+			<div uk-grid>
+				<div class="uk-flex">
+					<div class="uk-margin-small-right">
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+					</div>
+					2016-04-17
+				</div>
+
+			
+
+				
+				<div class="uk-flex  uk-margin-remove-top">
+					<div class="uk-margin-small-right uk-padding-remove-left">
+						<i class="fa fa-tags" aria-hidden="true"></i>
+					</div>
+					
+					code
+					
+				</div>
+				
+
+				
+
+				<div class="uk-flex  uk-margin-remove-top">
+					<div class="uk-margin-remove-top uk-padding-remove-left">
+						
+
+						<span id="/2016/04/17/centos-6.4-x32-install-mysql/" class="leancloud_visitors uk-margin-top-remove" data-flag-title="CentOS 6.4 x32 安装 MySQL">
+							<span class="post-meta-item-icon uk-margin-small-right">
+								<i class="fa fa-eye"></i>
+							</span>
+
+							<span class="leancloud-visitors-count">0</span>
+						</span>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="uk-width-1-5">
+		<div class="uk-width-auto uk-text-large uk-text-muted" style="font-size: 3em">
+			
+		</div>
+	</div>
+		<article class="uk-card uk-card-default uk-card-body">
+		<h2 id="mysql安装">MySQL安装</h2>
+
+<p>这里介绍以 CentOS6.4 X36 安装为例。</p>
+
+<ol>
+  <li>
+    <p>检测系统是否自带安装 mysql；</p>
+
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="n">yum</span> <span class="n">list</span> <span class="n">installed</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">mysql</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>删除系统自带的 mysql 及其依赖命令；</p>
+
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">remove</span> <span class="n">mysql</span><span class="o">-</span><span class="n">libs</span><span class="p">.</span><span class="n">x86_64</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>给 CentOS 添加 rpm 源，并且选择较新的源命令；</p>
+
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="n">wget</span> <span class="n">dev</span><span class="p">.</span><span class="n">mysql</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="k">get</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">community</span><span class="o">-</span><span class="n">release</span><span class="o">-</span><span class="n">el6</span><span class="o">-</span><span class="mi">5</span><span class="p">.</span><span class="n">noarch</span><span class="p">.</span><span class="n">rpm</span>
+ <span class="n">yum</span> <span class="n">localinstall</span> <span class="n">mysql</span><span class="o">-</span><span class="n">community</span><span class="o">-</span><span class="n">release</span><span class="o">-</span><span class="n">el6</span><span class="o">-</span><span class="mi">5</span><span class="p">.</span><span class="n">noarch</span><span class="p">.</span><span class="n">rpm</span>
+ <span class="n">yum</span> <span class="n">repolist</span> <span class="k">all</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">mysql</span>
+ <span class="n">yum</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">manager</span> <span class="c1">--disable mysql55-community</span>
+ <span class="n">yum</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">manager</span> <span class="c1">--disable mysql56-community</span>
+ <span class="n">yum</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="n">manager</span> <span class="c1">--enable mysql57-community-dmr</span>
+ <span class="n">yum</span> <span class="n">repolist</span> <span class="n">enabled</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">mysql</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>安装 mysql 服务器命令；</p>
+
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="n">yum</span> <span class="n">install</span> <span class="n">mysql</span><span class="o">-</span><span class="n">community</span><span class="o">-</span><span class="n">server</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>启动 mysql 命令；</p>
+
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="n">service</span> <span class="n">mysqld</span> <span class="k">start</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>查看 mysql 是否自启动，并且设置开启自启动命令；</p>
+
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="n">chkconfig</span> <span class="c1">--list | grep mysqld</span>
+ <span class="n">chkconfig</span> <span class="n">mysqld</span> <span class="k">on</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>mysql 安全设置命令；</p>
+
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="n">mysql_secure_installation</span>
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<h2 id="问题">问题</h2>
+
+<h4 id="登录时提示密码错误">登录时提示密码错误</h4>
+
+<div class="language-sql highlighter-rouge"><pre class="highlight"><code><span class="p">[</span><span class="n">root</span><span class="o">@</span><span class="n">cloud</span> <span class="n">aii</span><span class="o">-</span><span class="n">blog</span><span class="p">]</span><span class="o">#</span> <span class="n">mysql_secure_installation</span>
+
+<span class="n">Securing</span> <span class="n">the</span> <span class="n">MySQL</span> <span class="n">server</span> <span class="n">deployment</span><span class="p">.</span>
+
+<span class="n">Enter</span> <span class="n">password</span> <span class="k">for</span> <span class="k">user</span> <span class="n">root</span><span class="p">:</span>
+<span class="n">Error</span><span class="p">:</span> <span class="k">Access</span> <span class="n">denied</span> <span class="k">for</span> <span class="k">user</span> <span class="s1">'root'</span><span class="o">@</span><span class="s1">'localhost'</span> <span class="p">(</span><span class="k">using</span> <span class="n">password</span><span class="p">:</span> <span class="k">NO</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>解决方法</p>
+
+<ol>
+  <li>
+    <p>跳过密码登录，修改 /etc/my.cnf 文件，在文件末尾添加下面代码，</p>
+
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="n">skip</span><span class="o">-</span><span class="k">grant</span><span class="o">-</span><span class="n">tables</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>重启服务；</p>
+
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="n">service</span> <span class="n">mysqld</span> <span class="k">restart</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>重新连接，并修改密码；</p>
+
+    <div class="language-sql highlighter-rouge"><pre class="highlight"><code> <span class="n">mysql</span> <span class="o">-</span><span class="n">uroot</span> <span class="o">-</span><span class="n">p</span> <span class="o">//</span> <span class="err">连接数据库</span>
+ <span class="k">sql</span><span class="o">&gt;</span> <span class="n">use</span> <span class="n">mysql</span><span class="p">;</span> <span class="o">//</span> <span class="err">使用</span> <span class="n">mysql</span>
+ <span class="k">sql</span><span class="o">&gt;</span> <span class="k">update</span> <span class="k">user</span> <span class="k">set</span> <span class="n">authentication_string</span><span class="o">=</span><span class="n">password</span><span class="p">(</span><span class="s1">'newpassword'</span><span class="p">)</span> <span class="k">where</span> <span class="k">user</span><span class="o">=</span><span class="s1">'root'</span><span class="p">;</span> <span class="o">//</span> <span class="err">修改</span> <span class="n">root</span> <span class="err">用户密码</span>
+ <span class="k">sql</span><span class="o">&gt;</span> <span class="n">exit</span><span class="p">;</span> <span class="o">//</span> <span class="err">退出</span> <span class="n">mysql</span>
+ <span class="n">service</span> <span class="n">mysqld</span> <span class="n">reatart</span> <span class="o">//</span> <span class="err">重启服务</span>
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>现在就可以使用新的密码登录了。</p>
+  </li>
+</ol>
+
+<h4 id="远程客户端不能连接数据库">远程客户端不能连接数据库</h4>
+
+<p>详情可以参考 <a href="http://dba.stackexchange.com/questions/45806/cannot-change-root-access-in-mysql-to">Cannot change root access in MySQL to %</a> 。</p>
+
+		<hr>
+		
+<ul class="uk-pagination uk-child-width-1-2 uk-text-small">
+    <li>
+        
+
+        
+
+        <a href="/2016/04/28/iOS-Lightweight-Generice/"><span class="uk-margin-small-right" uk-pagination-previous></span> iOS 泛型（Light...</a>
+
+        
+        
+
+    </li>
+
+    <li class="uk-text-right">
+
+        
+        
+
+        <a href="/2016/03/22/the-server-quit-without-updating-pid-file/">The server quit w... <span class="uk-margin-small-left" uk-pagination-next></span></a>
+
+        
+        
+
+    </li>
+</ul>
+	</article>
+	
+	
+	
+	<div class="uk-card uk-card-default uk-card-body">
+		<div>
+			<div class="uk-margin-remove-left uk-margin-small-top" uk-grid>
+
+				<div class="uk-width-1-5 uk-padding-remove-left uk-margin-auto-top uk-margin-auto-bottom uk-margin-auto">
+					<img class="uk-border-circle" src="http://localhost:4000/assets/avatar.jpeg" alt="Border circle">
+				</div>
+				<div class="uk-width-4-5 uk-margin-auto-top uk-margin-auto-bottom">
+					<h2 class="uk-margin-remove-top">Later</h2>
+					<p>一个写代码的。能简单写点Objective-C、swift、html、css、js。没事还设计点UI，会用点Sketch。</p>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+	<div class="uk-card uk-card-default uk-card-body">
+		  <div class="comments" id="comments">
+  	
+ 
+  </div>
+
+  
+  
+<div id="container"></div>
+
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+	var gitment = new Gitment({
+		owner: 'lshxin89@126.com',
+		repo: 'blog.comments',
+		oauth: {
+			client_id: 'e192fca0611030509c7f',
+			client_secret: '9e0c77c8864e46db31d27f0ad08ad787cd221916',
+		},
+	})
+	gitment.render('container')
+</script>
+
+  
+	</div>
+</div>
+
+
+
+
+
+          </div>
+          <div class="uk-width-1 uk-text-center uk-padding-small uk-text-small uk-text-left">
+	
+	
+	 &copy; 1970 Later
+	 <p>Powered by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="http://jekyll.com.cn">Jekyll</a> . Theme by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="/"
+	 	>Later</a></p>
+</div>
+
+        </div>
+        <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
+          <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
+            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TEv9SLGVuokoA9S9hEJ4YdW3-gzGzoHsz", "FB770fG9JNXEB42O9KEOeFCT");</script>
+  <script>
+    function showTime(Counter) {
+
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  </body>
+  </html>
+

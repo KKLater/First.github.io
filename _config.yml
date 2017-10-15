@@ -18,8 +18,10 @@
 title: Your awesome title
 
 # About Author
-author: Later
-avatar: assets/avatar.gif
+author: 
+  name: Later
+  info: 一个写代码的。能简单写点Objective-C、swift、html、css、js。没事还设计点UI，会用点Sketch。
+avatar: /assets/avatar.jpeg
 # avatar: http://ouo0w16s7.bkt.clouddn.com/IMG_0754.JPG?e=1505118402&token=tYezop22TZHJ2SRLGu2c2pc_DIsOrZZ3JfZjeV5-:c2MkMIWAfzw5pPmwPci1MjBW0u4
 email: your-email@example.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -54,8 +56,9 @@ paginate_path: page:num
 
 menus: 
   POST : /
-  ARCHIVE : /archive
+  CATEGORIES: /categories
   TAGS : /tags
+  ARCHIVE : /archive
   LINKS : /links
   ABOUT : /about
 
@@ -118,4 +121,17 @@ leancloud_visitors:
 
 
 # youyan
-youyan_uid: 2144594
+youyan:
+  enable: false
+  uid: 2144594
+
+# Gitment
+gitment:
+  enable: true
+  owner: 'lshxin89@126.com'
+  repo: 'blog.comments'
+  client_id: 'e192fca0611030509c7f'
+  client_secret: '9e0c77c8864e46db31d27f0ad08ad787cd221916'
+
+
+permalink: pretty

@@ -7,6 +7,8 @@ categories: jekyll pixyll
 tag:       	code
 post-card-type: image
 type: code
+about: map
+
 ---
 
 随着iOS不断的升级，苹果逐步放弃了AssetsLibrary，提供了新的框架Photos。

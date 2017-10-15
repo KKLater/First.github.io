@@ -6,6 +6,8 @@ card-image:     https://ww3.sinaimg.cn/large/906cb9dbgw1fb2xyzt1mij20wk0duwmv.jp
 date:           2016-6-18 23:35:00
 tag:           code
 post-card-type: image
+categories: jekyll pixyll
+
 ---
 
 ```

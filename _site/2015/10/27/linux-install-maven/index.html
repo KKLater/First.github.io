@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>首页</title>
+
+  <link rel="stylesheet" type="text/css" href="/assets/uikit/css/uikit.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/theme.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/navigation.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/paginator.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/highlight/styles/tomorrow-night.css">
+
+  <!-- jQuery is required -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit-icons.min.js"></script>
+
+
+  <script src=" /assets/highlight/highlight.pack.js "></script>
+
+  <script>
+     hljs.initHighlightingOnLoad();
+  </script>
+  <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+
+  <script type="text/javascript">
+
+   window.onload = function()
+   { 
+
+    var winWidth = 0;
+    if (window.innerWidth) {
+      winWidth = window.innerWidth;
+    } else if ((document.body) && (document.body.clientWidth)) {
+      winWidth = document.body.clientWidth;
+    }
+
+  } 
+  window.onscroll =  function()
+  {
+    var winHeight = 0;
+    if (window.innerHeight) {
+      winHeight = window.innerHeight;
+    } else if ((document.body) && (document.body.clientHeight)) {
+      winHeight = document.body.clientHeight;
+    }
+    var height = $(document).scrollTop(); 
+
+
+    if (height > 10) {
+     $('.scroll-top-button').removeClass('uk-hidden');
+
+     $('.scroll-top-button').addClass('uk-visible');
+   } else {
+    $('.scroll-top-button').removeClass('uk-visible');
+
+    $('.scroll-top-button').addClass('uk-hidden');
+  }   
+}
+</script>
+</head>
+<body>
+  <div>
+      
+<div uk-sticky class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed uk-active uk-sticky-below">
+	<div class=" uk-container uk-container-expand  ls-container" >
+		<nav class="uk-navbar ls-navbar  uk-width-1" style="max-width: 640px">
+			<div class="uk-navbar-left">
+				<a class="uknavbar--item uk-logo ls-logo" href="/">大白的日常</a>
+			</div>
+			<div class="uk-navbar-right uk-visible@s">
+				<ul class="uk-navbar-nav">
+					
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/">POST</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/categories">CATEGORIES</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/tags">TAGS</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/archive">ARCHIVE</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/links">LINKS</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/about">ABOUT</a></li>
+					
+
+
+					
+					
+
+				</ul>
+			</div>
+			<div class="uk-navbar-right uk-hidden@s">
+				<a class="uk-navbar-toggle" style="height: 64px" uk-icon="icon: menu"></a>
+				<div uk-dropdown="mode: click;">
+					<ul class="uk-nav  uk-dropdown-nav">
+						
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/">POST</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/categories">CATEGORIES</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/tags">TAGS</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/archive">ARCHIVE</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/links">LINKS</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/about">ABOUT</a></li>
+					
+
+						
+						
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+	</div>
+</div>
+
+      <div class="uk-offcanvas-content">
+
+
+        <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
+          <div class="uk-margin-small-left uk-margin-small-right">            
+            
+<link rel="stylesheet" type="text/css" href="/assets/css/post.css">
+<div  class="uk-width-1 uk-child-width-1 uk-margin-auto uk-grid-medium" style="max-width: 640px" uk-grid>
+	
+		
+		
+			<ul class="uk-breadcrumb uk-margin-medium-top"  style="border-left: 3px solid #1AB3F2">
+				<li><a class="uk-margin-small-left" href="http://localhost:4000/category_page/#/"></a></li>
+				
+			</ul>
+
+		
+	<div class="uk-width-4-5 uk-margin-small-top">
+	
+		<div class="uk-margin-small-left   uk-text-large  uk-margin-auto uk-text-uppercase" style="max-width: 640px; font-size: 3em;" >Linux下安装Maven</div>
+
+		<div class=" uk-text-uppercase uk-margin-small-top uk-text-muted" >
+			<div uk-grid>
+				<div class="uk-flex">
+					<div class="uk-margin-small-right">
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+					</div>
+					2015-10-27
+				</div>
+
+			
+
+				
+				<div class="uk-flex  uk-margin-remove-top">
+					<div class="uk-margin-small-right uk-padding-remove-left">
+						<i class="fa fa-tags" aria-hidden="true"></i>
+					</div>
+					
+					code
+					
+				</div>
+				
+
+				
+
+				<div class="uk-flex  uk-margin-remove-top">
+					<div class="uk-margin-remove-top uk-padding-remove-left">
+						
+
+						<span id="/2015/10/27/linux-install-maven/" class="leancloud_visitors uk-margin-top-remove" data-flag-title="Linux下安装Maven">
+							<span class="post-meta-item-icon uk-margin-small-right">
+								<i class="fa fa-eye"></i>
+							</span>
+
+							<span class="leancloud-visitors-count">0</span>
+						</span>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="uk-width-1-5">
+		<div class="uk-width-auto uk-text-large uk-text-muted" style="font-size: 3em">
+			
+		</div>
+	</div>
+		<article class="uk-card uk-card-default uk-card-body">
+		<h2 id="简介">简介</h2>
+
+<p>Apache Maven，是一个软件（特别是Java软件）项目管理及自动构建工具，由Apache软件基金会所提供。基于项目对象模型（POM）概念，Maven利用一个中央信息片断能管理一个项目的构建、报告和文档等步骤。曾是Jakarta项目的子项目，现为独立Apache项目。</p>
+
+<h2 id="准备">准备</h2>
+
+<p><a href="http://maven.apache.org">Maven</a>（这里以最新的3.3版本为例。注意：如果使用3.3版本，那么你的JDK版本最低应为1.7，这些可以在官方网站中看到。）</p>
+
+<h2 id="开始">开始</h2>
+
+<p>首先下载Maven3.3.3，你可以从官网直接下载，或在终端中使用命令下载，解压，然后移动到你想要安装的目录当中，例如我是移动到了/home/sunmoon/wnglmng/dev这个目录下：</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">sunmoon@sunmoon-io:~$ </span>wget http://apache.fayea.com/maven/maven-3/3.3.3/binaries/apache-maven-3.3.3-bin.tar.gz
+<span class="gp">sunmoon@sunmoon-io:~$ </span>tar vxf apache-maven-3.3.3-bin.tar.gz
+<span class="gp">sunmoon@sunmoon-io:~$ </span>mv apache-maven-3.3.3 /home/sunmoon/wnglmng/dev
+</code></pre>
+</div>
+
+<p>然后，用gedit打开/etc/profile文件：</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">sunmoon@sunmoon-io:~$ </span>sudo gedit /etc/profile
+</code></pre>
+</div>
+
+<p>在编辑器中末尾添加如下代码：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>MAVEN_HOME=/home/sunmoon/wnglmng/dev/apache-maven-3.3.3
+export MAVEN_HOME
+export PATH=${PATH}:${MAVEN_HOME}/bin
+</code></pre>
+</div>
+
+<p>然后ctrl+s保存，这个时候环境变量并未生效，在终端执行如下命令即可生效：</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">sunmoon@sunmoon-io:~$ </span><span class="nb">source</span> /etc/profile
+</code></pre>
+</div>
+
+<p>检查是否生效，如果打印下面信息那么就是成功了：</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">sunmoon@sunmoon-io:~$ </span>mvn -v
+Apache Maven 3.3.3 <span class="o">(</span>7994120775791599e205a5524ec3e0dfe41d4a06; 2015-04-22T19:57:37+08:00<span class="o">)</span>
+Maven home: /home/sunmoon/wnglmng/dev/apache-maven-3.3.3
+Java version: 1.7.0_79, vendor: Oracle Corporation
+Java home: /usr/lib/jvm/java-7-openjdk-i386/jre
+Default locale: en_US, platform encoding: UTF-8
+OS name: <span class="s2">"linux"</span>, version: <span class="s2">"3.13.0-66-generic"</span>, arch: <span class="s2">"i386"</span>, family: <span class="s2">"unix"</span>
+</code></pre>
+</div>
+
+<p>到这里我们就可简单修改一下Mavne的配置文件。找到apache-maven-3.3.3/conf/setting.xml文件，找到如下代码：</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code>  <span class="c">&lt;!-- localRepository
+   | The path to the local repository maven will use to store artifacts.
+   |
+   | Default: ${user.home}/.m2/repository
+  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;
+  --&gt;</span>
+</code></pre>
+</div>
+
+<p>我们可以修改复制最后一行代码在注释的下面，并修改成你想要将Maven仓库存放的位置，如下：</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code>  <span class="c">&lt;!-- localRepository
+   | The path to the local repository maven will use to store artifacts.
+   |
+   | Default: ${user.home}/.m2/repository
+  &lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;
+  --&gt;</span>
+  <span class="nt">&lt;localRepository&gt;</span>/home/sunmoon/wnglmng/dev/maven-repository<span class="nt">&lt;/localRepository&gt;</span>
+</code></pre>
+</div>
+
+<p>最后，在终端中敲并回车执：</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">sunmoon@sunmoon-io:~$ </span>mvn <span class="nb">help</span>:system
+</code></pre>
+</div>
+
+<p>这时候Maven就会从远程仓库开始下载一大堆依赖下来，可能会花费一段时间，你可以做些其他的。最后下载完成，你会发现/home/sunmoon/wnglmng/dev/maven-repository这个文件夹在你的磁盘上就出现了，这个就是Maven仓库。</p>
+
+<p>这样，我们的Maven就按算完成了。</p>
+
+		<hr>
+		
+<ul class="uk-pagination uk-child-width-1-2 uk-text-small">
+    <li>
+        
+
+        
+
+        <a href="/2015/11/10/hibernate-validator/"><span class="uk-margin-small-right" uk-pagination-previous></span> Hibernate Va...</a>
+
+        
+        
+
+    </li>
+
+    <li class="uk-text-right">
+
+        
+        
+
+        <a href="http://www.baidu.com">百度 <span class="uk-margin-small-left" uk-pagination-next></span></a>
+
+        
+        
+
+    </li>
+</ul>
+	</article>
+	
+	
+	
+	<div class="uk-card uk-card-default uk-card-body">
+		<div>
+			<div class="uk-margin-remove-left uk-margin-small-top" uk-grid>
+
+				<div class="uk-width-1-5 uk-padding-remove-left uk-margin-auto-top uk-margin-auto-bottom uk-margin-auto">
+					<img class="uk-border-circle" src="http://localhost:4000/assets/avatar.jpeg" alt="Border circle">
+				</div>
+				<div class="uk-width-4-5 uk-margin-auto-top uk-margin-auto-bottom">
+					<h2 class="uk-margin-remove-top">Later</h2>
+					<p>一个写代码的。能简单写点Objective-C、swift、html、css、js。没事还设计点UI，会用点Sketch。</p>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+	<div class="uk-card uk-card-default uk-card-body">
+		  <div class="comments" id="comments">
+  	
+ 
+  </div>
+
+  
+  
+<div id="container"></div>
+
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+	var gitment = new Gitment({
+		owner: 'lshxin89@126.com',
+		repo: 'blog.comments',
+		oauth: {
+			client_id: 'e192fca0611030509c7f',
+			client_secret: '9e0c77c8864e46db31d27f0ad08ad787cd221916',
+		},
+	})
+	gitment.render('container')
+</script>
+
+  
+	</div>
+</div>
+
+
+
+
+
+          </div>
+          <div class="uk-width-1 uk-text-center uk-padding-small uk-text-small uk-text-left">
+	
+	
+	 &copy; 1970 Later
+	 <p>Powered by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="http://jekyll.com.cn">Jekyll</a> . Theme by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="/"
+	 	>Later</a></p>
+</div>
+
+        </div>
+        <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
+          <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
+            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TEv9SLGVuokoA9S9hEJ4YdW3-gzGzoHsz", "FB770fG9JNXEB42O9KEOeFCT");</script>
+  <script>
+    function showTime(Counter) {
+
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  </body>
+  </html>
+

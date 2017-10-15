@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>首页</title>
+
+  <link rel="stylesheet" type="text/css" href="/assets/uikit/css/uikit.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/theme.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/header.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/navigation.css">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/paginator.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/highlight/styles/tomorrow-night.css">
+
+  <!-- jQuery is required -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.30/js/uikit-icons.min.js"></script>
+
+
+  <script src=" /assets/highlight/highlight.pack.js "></script>
+
+  <script>
+     hljs.initHighlightingOnLoad();
+  </script>
+  <script type="text/javascript" src="/assets/js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid="></script>
+
+  <script type="text/javascript">
+
+   window.onload = function()
+   { 
+
+    var winWidth = 0;
+    if (window.innerWidth) {
+      winWidth = window.innerWidth;
+    } else if ((document.body) && (document.body.clientWidth)) {
+      winWidth = document.body.clientWidth;
+    }
+
+  } 
+  window.onscroll =  function()
+  {
+    var winHeight = 0;
+    if (window.innerHeight) {
+      winHeight = window.innerHeight;
+    } else if ((document.body) && (document.body.clientHeight)) {
+      winHeight = document.body.clientHeight;
+    }
+    var height = $(document).scrollTop(); 
+
+
+    if (height > 10) {
+     $('.scroll-top-button').removeClass('uk-hidden');
+
+     $('.scroll-top-button').addClass('uk-visible');
+   } else {
+    $('.scroll-top-button').removeClass('uk-visible');
+
+    $('.scroll-top-button').addClass('uk-hidden');
+  }   
+}
+</script>
+</head>
+<body>
+  <div>
+      
+<div uk-sticky class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed uk-active uk-sticky-below">
+	<div class=" uk-container uk-container-expand  ls-container" >
+		<nav class="uk-navbar ls-navbar  uk-width-1" style="max-width: 640px">
+			<div class="uk-navbar-left">
+				<a class="uknavbar--item uk-logo ls-logo" href="/">大白的日常</a>
+			</div>
+			<div class="uk-navbar-right uk-visible@s">
+				<ul class="uk-navbar-nav">
+					
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/">POST</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/categories">CATEGORIES</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/tags">TAGS</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/archive">ARCHIVE</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/links">LINKS</a></li>
+					
+
+
+					
+					
+					
+					
+					
+					<li  style="height: 64px"><a class="nav_item nav_item_unselect" style="height: 64px; width: fit-content; max-width: 100px; margin: auto 15px; padding: 0px;" href="http://localhost:4000/about">ABOUT</a></li>
+					
+
+
+					
+					
+
+				</ul>
+			</div>
+			<div class="uk-navbar-right uk-hidden@s">
+				<a class="uk-navbar-toggle" style="height: 64px" uk-icon="icon: menu"></a>
+				<div uk-dropdown="mode: click;">
+					<ul class="uk-nav  uk-dropdown-nav">
+						
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/">POST</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/categories">CATEGORIES</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/tags">TAGS</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/archive">ARCHIVE</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/links">LINKS</a></li>
+					
+
+						
+						
+						
+
+							
+					
+						<li class="ls-nav-item-li-dropdown"><a class="nav_item nav_item_unselect" href="http://localhost:4000/about">ABOUT</a></li>
+					
+
+						
+						
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+	</div>
+</div>
+
+      <div class="uk-offcanvas-content">
+
+
+        <div  class="uk-width-1"  uk-scrollspy="target: > div; cls:uk-animation-fade; delay: 300 repeat: true">
+          <div class="uk-margin-small-left uk-margin-small-right">            
+            
+<link rel="stylesheet" type="text/css" href="/assets/css/post.css">
+<div  class="uk-width-1 uk-child-width-1 uk-margin-auto uk-grid-medium" style="max-width: 640px" uk-grid>
+	
+		
+		
+			<ul class="uk-breadcrumb uk-margin-medium-top"  style="border-left: 3px solid #1AB3F2">
+				<li><a class="uk-margin-small-left" href="http://localhost:4000/category_page/#/"></a></li>
+				
+			</ul>
+
+		
+	<div class="uk-width-4-5 uk-margin-small-top">
+	
+		<div class="uk-margin-small-left   uk-text-large  uk-margin-auto uk-text-uppercase" style="max-width: 640px; font-size: 3em;" >集合与泛型</div>
+
+		<div class=" uk-text-uppercase uk-margin-small-top uk-text-muted" >
+			<div uk-grid>
+				<div class="uk-flex">
+					<div class="uk-margin-small-right">
+						<i class="fa fa-calendar" aria-hidden="true"></i>
+					</div>
+					2017-09-17
+				</div>
+
+			
+
+				
+
+				
+
+				<div class="uk-flex  uk-margin-remove-top">
+					<div class="uk-margin-remove-top uk-padding-remove-left">
+						
+
+						<span id="/2017/09/17/liteweight/" class="leancloud_visitors uk-margin-top-remove" data-flag-title="集合与泛型">
+							<span class="post-meta-item-icon uk-margin-small-right">
+								<i class="fa fa-eye"></i>
+							</span>
+
+							<span class="leancloud-visitors-count">0</span>
+						</span>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="uk-width-1-5">
+		<div class="uk-width-auto uk-text-large uk-text-muted" style="font-size: 3em">
+			
+		</div>
+	</div>
+		<article class="uk-card uk-card-default uk-card-body">
+		<p>[TOC]
+###集合类型:</p>
+<ul>
+  <li>ArrayList</li>
+  <li>TreeSet
+    <ul>
+      <li>以有序状态保持并可防止重复</li>
+    </ul>
+  </li>
+  <li>HashMap
+    <ul>
+      <li>可用成对的<code class="highlighter-rouge">name/value</code>来保存与取出</li>
+    </ul>
+  </li>
+  <li>LinkedList
+    <ul>
+      <li>针对经常插入或删除中间元素所涉及的高效率集合。(实际上ArrayList还是比较实用)</li>
+    </ul>
+  </li>
+  <li>HashSet
+    <ul>
+      <li>防止重复的集合，可快速地找寻相符的元素</li>
+    </ul>
+  </li>
+  <li>LinkedHashMap
+    <ul>
+      <li>类似HashMap，但可记住元素插入的顺序，也可以设定成依照元素上次存取的先后来排序</li>
+    </ul>
+  </li>
+  <li>
+    <hr />
+    <p>###关于排序
+<code class="highlighter-rouge">TreeSet</code>与<code class="highlighter-rouge">Collections</code>均有排序方法。但是，<code class="highlighter-rouge">TreeSet</code>总会依次排序，当你插入过着删除一个元素时，总需要耗时进行排序，故而有效率考虑因素。故而一般性使用<code class="highlighter-rouge">Collections</code>比较好些。可以调用<code class="highlighter-rouge">Collections.sort()</code>进行排序。
+例如对歌曲名单进行排序:
+```Java
+//class  Song
+public class Song implements Comparable<Song> {
+  String title;
+  String artist;
+  String rating;
+  String bpm;</Song></p>
+
+    <p>public int compareTo(Song s) {
+      return title.compareTo(s.getTitle());
+  }
+  Song(String t, String a, String r, String b) {
+      title = t;
+      artist = a;
+      rating = r;
+      bpm = b;
+  }</p>
+
+    <p>/**</p>
+    <ul>
+      <li>@return the title
+   */
+  public String getTitle() {
+ return title;
+  }</li>
+    </ul>
+
+    <p>/**</p>
+    <ul>
+      <li>@return the artist
+   */
+  public String getArtist() {
+ return artist;
+  }</li>
+    </ul>
+
+    <p>/**</p>
+    <ul>
+      <li>@return the rating
+   */
+  public String getRating() {
+ return rating;
+  }
+  /**</li>
+      <li>@return the bpm
+   */
+  public String getBpm() {
+ return bpm;
+  }</li>
+    </ul>
+
+    <p>@Override
+  public String toString() {
+      return title;
+  }
+}</p>
+  </li>
+</ul>
+
+<p>//class  Jukebox
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.io.File;</p>
+
+<p>public class Jukebox {
+    ArrayList<Song> songList  = new ArrayList<Song>();
+    public static void main(String[] args) {
+        new Jukebox().go();
+    }
+    class ArtistCompare implements Comparator<Song> {
+        public int compare(Song one, Song two) {
+            return one.getArtist().compareTo(two.getArtist());
+        }
+    }
+    public void go() {
+        getSongs();
+        System.out.println(songList);
+        ArtistCompare artistCompare = new ArtistCompare();
+        Collections.sort(songList, artistCompare);
+        System.out.println(songList);
+    }
+    private void getSongs() {
+        try {
+            File file = new File("Songlist.text");
+            BufferedReader reader = new BufferedReader(new FileReader(file));
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                addSong(line);
+            }
+        } catch (Exception e) {
+            //TODO: handle exception
+            e.printStackTrace();
+        }
+    }
+    private void addSong(String lineToParse) {
+        String[] tokens = lineToParse.split("/");
+        Song nextSong = new Song(tokens[0], tokens[1], tokens[2], tokens[3]);
+        songList.add(nextSong);
+    }
+}</Song></Song></Song></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Collection的API说明文件中，涉及到3个主要的接口:List\Set\Map。
+&lt;!--/ style="text-align:left; color:red" /--&gt;
+LIST
+&lt;!--/--&gt;
+
+&gt;一种知道索引位置的集合。知道某物在系列集合中的位置。可以有多个元素引用相同的对象。是对付顺序的好帮手。
+&lt;!--/ style="text-align:left; color:red" /--&gt;
+SET
+&lt;!--/--&gt;
+
+&gt;不允许重复的集合。知道某物是否已经存在于集合中，不会有多个元素引用相同的对象(被认为相等的两个对象也不行)
+&lt;!--/ style="text-align:left; color:red" /--&gt;
+MAP
+&lt;!--/--&gt;
+
+&gt; 使用成对的键值和数据值。`MAP`会维护与`key`有关联的值。两个`key`可以引用相同的对象，但是`key`不能重复。典型的`key`是`String`，但也可以是任何对象。
+
+###Collection API
+* Collection(interface)
+    * Set(interface)
+        *   SortedSet(interface)
+            * TreeSet
+        * LinkedHashSet
+        * Hashset
+    * List(interface)
+        * ArrayList
+        * LinkedList
+        * Vector
+* Map(interface)
+    * SortedMap(interface)
+        * TreeMap
+    * HashMap
+    * LinkedHashMap
+    * HashTable
+- - - - -
+###对象相等
+* 引用相等性
+     &gt; - 堆上同一对象的两个引用。引用到堆上同一个对象的两个引用是相等的。
+     &gt; - 如果要知道两个引用是否相等，可以使用`==`来比较两个变量上的字节组合。如果引用到相同的对象，字节组合会一样
+* 对象相等性
+    &gt; - 堆上的两个不同对象在意义上是相同的。
+    &gt; - 如果你想要把两个不同的对象视为相等的，就必须覆盖过从`Object`继承下来的`hashCode()`方法与`equals()`方法。
+    &gt; - 因为计算的内存问题，必须覆盖过`hashCode`才能确保两个对象有相同的`hashcode`，也就确保以另一个对象为参数的`equals()`调用会返回`true`。
+
+* hashCode()与equals()的相关规定
+    &gt; 1、如果两个对象相等，则`hashcode`必须相等。
+    &gt; 2、如果两个对象相等，对其中一个对象调用`equals()`必须返回`true`。也就是说，若`a.equals(b)`，则`b.equals(a)`。
+    &gt; 3、如果两个对象有相同的`hashcode`值，他们也不一定是相等的。单若两个对象相等，则`hashcode`值一定不相等。
+    &gt; 4、因此若`equals()`被覆盖过，则`hashcode()`也必须被覆盖。
+    &gt; 5、`hashcode()`的默认行为是对在`heap`上的对象产生独特的值。如果你没有`override`过`hashcode`。则该`class`的两个对象怎样都不会被认为是相同的。
+    &gt; 6、`equals()`默认行为是执行`==`的比较。也就是说会去测试两个引用是否堆上`heap`上同一个对象。如果`equals()`没有被覆盖，两个对象永远都不会被视为相同，因为不同的对象有不同的字节组合。
+
+ **`a.equals(b)`必须与`a.hashCode() == b.hashCode()`等值。但 `a.hashCode() == b.hashCode()`不一定要与`a.eqals()`等值。**
+* 要保持有序可以使用`TreeSet`，但是使用时下列其中一项必须为真。
+    &gt; - 集合的元素必须是有实现`Comparable`的类型。
+    &gt; - 使用重载、取用`Comparator`参数的构造函数来创建`TreeSet`。
+
+- - - - -
+###泛型
+**数组的类型是在运行期间检查的，但是集合的类型检查只会发生在编译期间。**
+**万用符号可以帮助创建出接收父类子型参数的方法**
+```Java
+public void takeAnimals(ArrayList&lt;? extends Animal&gt;) animals) {
+    //extens同时代表继承和实现。如果要取用有实现 Pet 这个接口类型的 ArrayList，也是这样声明:ArrayList&lt;? extends Pet&gt;
+    for (Animal a: animals) {
+        a.eta();
+    }
+}
+</code></pre>
+</div>
+<ul>
+  <li>注意:
+    <blockquote>
+      <ul>
+        <li>在方法参数中，使用万用字符时，编译器会组织任何可能破坏引用参数所指集合的行为。</li>
+        <li>你能够调用 list 中任何元素的方法，但不能加入元素。也就是说，你可以操作集合元素，饭不能新增集合元素。如此保障执行期间的安全性，因为编辑器会组织执行器的恐怖行为。</li>
+      </ul>
+    </blockquote>
+  </li>
+  <li>其他方法:
+    <pre><code class="language-Java">//下两种一样
+public &lt;T extends Animal&gt; void takeThing(ArrayList&lt;T&gt; list);
+public void takeThing(ArrayList&lt;? extends Animal&gt; list);
+//下两种一样
+public &lt;T extends Animal&gt; void takeThing(ArrayList&lt;T&gt; one , ArrayList&lt;T&gt; two)；
+public void takeThing(ArrayList&lt;? extends Animal&gt; one, ArrayList&lt;? extends Animal&gt; two);
+</code></pre>
+  </li>
+</ul>
+
+		<hr>
+		
+<ul class="uk-pagination uk-child-width-1-2 uk-text-small">
+    <li>
+        
+
+        
+
+        <a href="/jekyll/update/2017/09/18/welcome-to-jekyll/"><span class="uk-margin-small-right" uk-pagination-previous></span> Welcome to J...</a>
+
+        
+        
+
+    </li>
+
+    <li class="uk-text-right">
+
+        
+        
+
+        <a href="/2017/05/16/java-download-file-problems/">记一次文件下载的尬途 <span class="uk-margin-small-left" uk-pagination-next></span></a>
+
+        
+        
+
+    </li>
+</ul>
+	</article>
+	
+	
+	
+	<div class="uk-card uk-card-default uk-card-body">
+		<div>
+			<div class="uk-margin-remove-left uk-margin-small-top" uk-grid>
+
+				<div class="uk-width-1-5 uk-padding-remove-left uk-margin-auto-top uk-margin-auto-bottom uk-margin-auto">
+					<img class="uk-border-circle" src="http://localhost:4000/assets/avatar.jpeg" alt="Border circle">
+				</div>
+				<div class="uk-width-4-5 uk-margin-auto-top uk-margin-auto-bottom">
+					<h2 class="uk-margin-remove-top">Later</h2>
+					<p>一个写代码的。能简单写点Objective-C、swift、html、css、js。没事还设计点UI，会用点Sketch。</p>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+	<div class="uk-card uk-card-default uk-card-body">
+		  <div class="comments" id="comments">
+  	
+ 
+  </div>
+
+  
+  
+<div id="container"></div>
+
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+	var gitment = new Gitment({
+		owner: 'lshxin89@126.com',
+		repo: 'blog.comments',
+		oauth: {
+			client_id: 'e192fca0611030509c7f',
+			client_secret: '9e0c77c8864e46db31d27f0ad08ad787cd221916',
+		},
+	})
+	gitment.render('container')
+</script>
+
+  
+	</div>
+</div>
+
+
+
+
+
+          </div>
+          <div class="uk-width-1 uk-text-center uk-padding-small uk-text-small uk-text-left">
+	
+	
+	 &copy; 1970 Later
+	 <p>Powered by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="http://jekyll.com.cn">Jekyll</a> . Theme by <a class="uk-button-link" style="text-decoration: none;" target="__blance" href="/"
+	 	>Later</a></p>
+</div>
+
+        </div>
+        <div style="z-index: 1000;" class="scroll-top-button uk-hidden uk-text-right uk-overlay uk-position-fixed  uk-position-bottom-right">
+          <div class="uk-card uk-card-default uk-card-hover"  style="border-radius:20px">
+            <a class="uk-margin-small uk-margin-small-left uk-margin-small-top uk-margin-small-right" href="#" uk-totop uk-scroll></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TEv9SLGVuokoA9S9hEJ4YdW3-gzGzoHsz", "FB770fG9JNXEB42O9KEOeFCT");</script>
+  <script>
+    function showTime(Counter) {
+
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  </body>
+  </html>
+

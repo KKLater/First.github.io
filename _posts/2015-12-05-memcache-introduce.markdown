@@ -6,6 +6,8 @@ card-image:     https://ww4.sinaimg.cn/mw690/906cb9dbgw1fayofw6kcmj20jj099jsj.jp
 date:           2015-12-05 19:00:00
 tag:           code
 post-card-type: image
+about: map
+
 ---
 
 最近在学习有关缓存的一些知识，了解到有Memcache和Redis，那我先来介绍一下我目前了解到Memcache吧。有些人可能会在网上看到Memcache和Memcached这两个词，这两个个东西其实不必太在意，只不过Memcache是这个项目的名称，而Memcached是项目的服务端主程序名称。

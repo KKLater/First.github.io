@@ -6,6 +6,8 @@ card-image:     https://ww1.sinaimg.cn/large/906cb9dbgw1f9ilpmreqhj21kw0zk151.jp
 date:           2015-10-26 19:00:00
 tag:           code
 post-card-type: article
+about: map
+
 ---
 
 ## 简介
