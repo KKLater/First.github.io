@@ -129,8 +129,8 @@ youyan:
 # link: https://github.com/imsun/gitment
 gitment:
   enable: true
-  owner: 'lshxin89@126.com'
-  repo: 'blog.comments'
+  owner: 'KKLater'
+  repo: 'first.github.io'
   client_id: 'e192fca0611030509c7f'
   client_secret: '9e0c77c8864e46db31d27f0ad08ad787cd221916'
 
