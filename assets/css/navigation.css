@@ -50,7 +50,7 @@
 
 .nav_item_unselect
 {
-	border-bottom:2px solid clear;
+	border-bottom:2px solid rgba(0, 0, 0, 0);
 	color: #8f8f8f;
 
 }
